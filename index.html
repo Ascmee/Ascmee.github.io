@@ -5,27 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AcBlog</title>
   </head>
-  <body>
-    <!--TOP BAR-->
-    <div
-      name="topBar"
-      style="
-        width: 94%;
-        height: 5%;
-        border-radius: 10px;
-        border: 3px;
-        border-style: solid;
-        position: absolute;
-        left: 3%;
-        text-align: center;
-      "
-    >
-      <h1 style="position: absolute; top: -40%; left: 45%">Acc Blog</h1>
-    </div>
-
+  <body style="background-color: rgb(255, 255, 255)">
     <!--USER INFO-->
     <div
-      name="userInfo"
+      id="userInfo"
       style="
         width: 17%;
         height: 30%;
@@ -33,14 +16,15 @@
         border: 3px;
         border-style: solid;
         position: absolute;
-        top: 10%;
+        top: 15%;
         left: 2%;
+        background-color: aliceblue;
       "
     ></div>
 
     <!--ARTICLES-->
     <div
-      name="articles"
+      id="articles"
       style="
         width: 17%;
         height: 47%;
@@ -48,38 +32,74 @@
         border: 3px;
         border-style: solid;
         position: absolute;
-        top: 43%;
+        top: 48%;
         left: 2%;
+        background-color: aliceblue;
+      "
+    ></div>
+
+    <!--RECOMMEND-->
+    <div
+      id="recommend"
+      style="
+        width: 17%;
+        height: 100%;
+        border-radius: 10px;
+        border: 3px;
+        border-style: solid;
+        position: absolute;
+        top: 15%;
+        left: 81%;
+        background-color: aliceblue;
+      "
+      onmouseover="
+        var recommend = document.getElementById('recommend');
+        recommend.style.zIndex = '999';
+        recommend.style.width = '27%';
+        recommend.style.height = '110%';
+        recommend.style.top = '5%';
+        recommend.style.left = '71%';
+      "
+      onmouseleave="
+        var recommend = document.getElementById('recommend');
+        recommend.style.zIndex = '10';
+        recommend.style.width = '17%';
+        recommend.style.height = '100%';
+        recommend.style.top = '15%';
+        recommend.style.left = '81%';
       "
     ></div>
 
     <!--CONTENT-->
     <div
-      name="content"
+      id="content"
       style="
-        width: 50%;
-        height: 80%;
+        width: 60%;
+        height: 180%;
         border-radius: 10px;
         border: 3px;
         border-style: solid;
         position: absolute;
-        top: 10%;
+        top: 15%;
         left: 20%;
+        background-color: aliceblue;
       "
-    ></div>
-    <!--RECOMMEND-->
-    <div
-      name="content"
-      style="
-        width: 27%;
-        height: 80%;
-        border-radius: 10px;
-        border: 3px;
-        border-style: solid;
-        position: absolute;
-        top: 10%;
-        left: 71%;
+      onmouseover="
+        var content = document.getElementById('content');
+        content.style.zIndex = '999';
+        content.style.width = '70%';
+        content.style.height = '190%';
+        content.style.top = '5%';
+        content.style.left = '15%';
       "
+      onmouseleave="
+        var content = document.getElementById('content');
+        content.style.zIndex = '10';
+        content.style.width = '60%';
+        content.style.height = '180%';
+        content.style.top = '15%';
+        content.style.left = '20%';
+        "
     ></div>
   </body>
 </html>
