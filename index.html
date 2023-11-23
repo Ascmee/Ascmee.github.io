@@ -1,105 +1,48 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-cn">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AcBlog</title>
+    <title>Home|Acc的博客</title>
+    <link href="/css/general.css" rel="stylesheet" type="text/css" />
   </head>
-  <body style="background-color: rgb(255, 255, 255)">
-    <!--USER INFO-->
-    <div
-      id="userInfo"
-      style="
-        width: 17%;
-        height: 30%;
-        border-radius: 10px;
-        border: 3px;
-        border-style: solid;
-        position: absolute;
-        top: 15%;
-        left: 2%;
-        background-color: aliceblue;
-      "
-    ></div>
+  <body onresize="browser_resize();" onload="body_init();">
+    <!--Top bar-->
+    <div class="div-topbar">
+      <!--topbar blogger-->
+      <div id="div-a-blogger" class="div-topbar-content">
+        <a id="a-blogger" class="div-topabr-content-a" href="/index.html">Acc的博客</a>
+      </div>
+      <!--left topbar-->
+      <div id="div-div-topbar">
+        <!--topbar articles-->
+        <div id="div-a-articles" class="div-topbar-content">
+          <a href="/articles.html"><img class="div-topbar-content-img" src="/image/articles.png" /></a>
+          <a id="a-articles" class="div-topabr-content-a" href="/articles.html">文章</a>
+          <!--topbar classify-->
+          <div id="div-a-classify" class="div-topbar-content">
+            <a href="/classification.html"><img class="div-topbar-content-img" src="/image/classification.png" /></a>
+            <a id="a-classify" class="div-topabr-content-a" href="/classification.html">分类</a>
+          </div>
+        </div>
+        <!--topbar about-->
+        <div id="div-a-about" class="div-topbar-content">
+          <a href="/about.html"><img class="div-topbar-content-img" src="/image/about.png" /></a>
+          <a id="a-about" class="div-topabr-content-a" href="/about.html">关于</a>
+        </div>
+        <!--topbar projects-->
+        <div id="div-a-projects" class="div-topbar-content">
+          <a href="/projects.html"><img class="div-topbar-content-img" src="/image/projects.png" /></a>
+          <a id="a-projects" class="div-topabr-content-a" href="/projects.html">项目</a>
+        </div>
+      </div>
+      <!--topbar more-->
+      <div id="div-more" class="div-topbar-content" onclick="div_more_click();">
+        <img id="div-more-img" src="/image/more.png" draggable="false" />
+      </div>
+    </div>
 
-    <!--ARTICLES-->
-    <div
-      id="articles"
-      style="
-        width: 17%;
-        height: 47%;
-        border-radius: 10px;
-        border: 3px;
-        border-style: solid;
-        position: absolute;
-        top: 48%;
-        left: 2%;
-        background-color: aliceblue;
-      "
-    ></div>
-
-    <!--RECOMMEND-->
-    <div
-      id="recommend"
-      style="
-        width: 17%;
-        height: 100%;
-        border-radius: 10px;
-        border: 3px;
-        border-style: solid;
-        position: absolute;
-        top: 15%;
-        left: 81%;
-        background-color: aliceblue;
-      "
-      onmouseover="
-        var recommend = document.getElementById('recommend');
-        recommend.style.zIndex = '999';
-        recommend.style.width = '27%';
-        recommend.style.height = '110%';
-        recommend.style.top = '5%';
-        recommend.style.left = '71%';
-      "
-      onmouseleave="
-        var recommend = document.getElementById('recommend');
-        recommend.style.zIndex = '10';
-        recommend.style.width = '17%';
-        recommend.style.height = '100%';
-        recommend.style.top = '15%';
-        recommend.style.left = '81%';
-      "
-    ></div>
-
-    <!--CONTENT-->
-    <div
-      id="content"
-      style="
-        width: 60%;
-        height: 180%;
-        border-radius: 10px;
-        border: 3px;
-        border-style: solid;
-        position: absolute;
-        top: 15%;
-        left: 20%;
-        background-color: aliceblue;
-      "
-      onmouseover="
-        var content = document.getElementById('content');
-        content.style.zIndex = '999';
-        content.style.width = '70%';
-        content.style.height = '190%';
-        content.style.top = '5%';
-        content.style.left = '15%';
-      "
-      onmouseleave="
-        var content = document.getElementById('content');
-        content.style.zIndex = '10';
-        content.style.width = '60%';
-        content.style.height = '180%';
-        content.style.top = '15%';
-        content.style.left = '20%';
-        "
-    ></div>
+    <!--script-->
+    <script src="/js/general.js"></script>
   </body>
 </html>
