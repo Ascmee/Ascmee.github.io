@@ -1,0 +1,95 @@
+/* font */
+@font-face {
+  font-family: "LXGW WenKai Mono";
+  src: url("/fonts/LXGWWenKaiMono-Regular.ttf");
+}
+
+@font-face {
+  font-family: "LXGW WenKai Mono Bold";
+  src: url("/fonts/LXGWWenKaiMono-Bold.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "LXGW WenKai Mono Light";
+  src: url("/fonts/LXGWWenKaiMono-Light.ttf");
+}
+
+/* body */
+body {
+  margin: 0px;
+}
+/* all a */
+a {
+  text-decoration: none;
+  color: black;
+}
+/* class */
+/* topbar */
+.div-topbar {
+  font-family: "LXGW WenKai Mono Bold";
+  background-color: rgb(242, 242, 242);
+  position: absolute;
+  height: 70px;
+  width: 100%;
+}
+/* topbar div */
+.div-topbar-content {
+  position: absolute;
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+/* topbar img */
+.div-topbar-content-img {
+  height: 20px;
+  width: 20px;
+  transform: translate(-10%, 0);
+  display: flex;
+}
+/* id */
+/* topbar div */
+#div-a-blogger {
+  left: 30%;
+  transform: translate(-50%, 0);
+}
+
+#div-div-topbar {
+  position: absolute;
+  right: 40%;
+}
+
+#div-a-articles {
+  transform: translate(0, 0);
+  width: max-content;
+}
+
+#div-a-classify {
+  transform: translate(150%, 0);
+  width: max-content;
+}
+
+#div-a-projects {
+  transform: translate(300%, 0);
+  width: max-content;
+}
+
+#div-a-about {
+  transform: translate(450%, 0);
+  width: max-content;
+}
+
+#div-more {
+  left: 5px;
+  visibility: hidden;
+}
+
+#div-more-img {
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+}
+
+#a-blogger {
+  font-size: 30px;
+}
