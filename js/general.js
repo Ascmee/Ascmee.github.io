@@ -1,51 +1,115 @@
-const div_a_blogger = document.getElementById("div-a-blogger");
-const div_a_articles = document.getElementById("div-a-articles");
-const div_a_classify = document.getElementById("div-a-classify");
-const div_a_projects = document.getElementById("div-a-projects");
-const div_a_about = document.getElementById("div-a-about");
-const div_more = document.getElementById("div-more");
-
+const topbar_div_more = document.getElementById("topbar-div-more-id");
+const topbar_div = document.getElementById("topbar-div-id");
+const topbar_div_blogger = document.getElementById("topbar-div-blogger-id");
+const topbar_div_img_articles = document.getElementById("topbar-div-img-articles-id");
+const topbar_div_img_classification = document.getElementById("topbar-div-img-classification-id");
+const topbar_div_img_projects = document.getElementById("topbar-div-img-projects-id");
+const topbar_div_img_about = document.getElementById("topbar-div-img-about-id");
+const topbar_div_a_articles = document.getElementById("topbar-div-a-articles-id");
+const topbar_div_a_classification = document.getElementById("topbar-div-a-classification-id");
+const topbar_div_a_projects = document.getElementById("topbar-div-a-projects-id");
+const topbar_div_a_about = document.getElementById("topbar-div-a-about-id");
+const topbar_div_outer_show = document.getElementById("topbar-div-outer-show-id");
 // width
-var blogger_width = div_a_blogger.offsetWidth;
-var articles_width = div_a_articles.offsetWidth;
-var classify_width = div_a_classify.offsetWidth;
-var projects_width = div_a_projects.offsetWidth;
-var about_width = div_a_about.offsetWidth;
 var screen_width = screen.width;
 var time_over_hundred = true;
 
 function body_init() {
-  browser_resize();
+  var window_width = window.outerWidth;
+  if (window_width / screen_width >= 0.5 && screen_width >= 500) {
+    topbar_div_blogger.style.left = (window_width / screen_width - 0.5) * 60 + 1 + "%";
+    topbar_div.style.visibility = "visible";
+    topbar_div_more.style.visibility = "hidden";
+  } else {
+    topbar_div_blogger.style.left = "1%";
+    topbar_div_more.style.visibility = "visible";
+    topbar_div.style.right = "100%";
+    topbar_div.style.visibility = "hidden";
+  }
 }
 
 function browser_resize() {
   var window_width = window.outerWidth;
   if (!time_over_hundred) return;
   time_over_hundred = false;
-  if (window_width / screen_width >= 0.54 && screen_width >= 500) {
-    if (div_a_about.style.visibility == "hidden") {
-      set_div_topbar_a_visibility("visible");
-    }
+  if (window_width / screen_width >= 0.5 && screen_width >= 500) {
+    topbar_div_blogger.style.left = (window_width / screen_width - 0.5) * 60 + 1 + "%";
+    topbar_div.style.visibility = "visible";
+    topbar_div_more.style.visibility = "hidden";
+    topbar_div.style.right = "40%";
+    topbar_div.style.top = "0px";
+    topbar_div_outer_show.style.visibility = "hidden";
   } else {
-    set_div_topbar_a_visibility("hidden");
+    topbar_div_blogger.style.left = "1%";
+    topbar_div_more.style.visibility = "visible";
+    if (topbar_div_outer_show.style.visibility != "visible") {
+      topbar_div.style.visibility = "hidden";
+      topbar_div.style.right = "100%";
+    }
   }
   setTimeout(set_time_over_hundred, 100);
-}
-
-function set_div_topbar_a_visibility(propority) {
-  div_a_articles.style.visibility = propority;
-  div_a_classify.style.visibility = propority;
-  div_a_projects.style.visibility = propority;
-  div_a_about.style.visibility = propority;
-  if (propority == "hidden") {
-    div_more.style.visibility = "visible";
-  } else {
-    div_more.style.visibility = "hidden";
-  }
 }
 
 function set_time_over_hundred() {
   time_over_hundred = true;
 }
 
-function div_more_click() {}
+function set_topbar_color(topbar_div_img_id, topbar_div_img_path, topbar_div_a_id, topbar_div_a_color) {
+  document.getElementById(topbar_div_img_id).src = topbar_div_img_path;
+  document.getElementById(topbar_div_a_id).style.color = topbar_div_a_color;
+}
+
+function set_topbar_articles_color(over) {
+  if (over) {
+    set_topbar_color("topbar-div-img-articles-id", "image/articles_over.png", "topbar-div-a-articles-id", "#2a6df4");
+  } else {
+    set_topbar_color("topbar-div-img-articles-id", "image/articles.png", "topbar-div-a-articles-id", "black");
+  }
+}
+
+function set_topbar_classification_color(over) {
+  if (over) {
+    set_topbar_color("topbar-div-img-classification-id", "image/classification_over.png", "topbar-div-a-classify-id", "#2a6df4");
+  } else {
+    set_topbar_color("topbar-div-img-classification-id", "image/classification.png", "topbar-div-a-classify-id", "black");
+  }
+}
+
+function set_topbar_projects_color(over) {
+  if (over) {
+    set_topbar_color("topbar-div-img-projects-id", "image/projects_over.png", "topbar-div-a-projects-id", "#2a6df4");
+  } else {
+    set_topbar_color("topbar-div-img-projects-id", "image/projects.png", "topbar-div-a-projects-id", "black");
+  }
+}
+
+function set_topbar_about_color(over) {
+  if (over) {
+    set_topbar_color("topbar-div-img-about-id", "image/about_over.png", "topbar-div-a-about-id", "#2a6df4");
+  } else {
+    set_topbar_color("topbar-div-img-about-id", "image/about.png", "topbar-div-a-about-id", "black");
+  }
+}
+
+function div_more_click() {
+  if (topbar_div_outer_show.style.visibility == "visible") {
+    topbar_div.style.visibility = "hidden";
+    topbar_div.style.right = "40%";
+    topbar_div.style.top = "0px";
+    topbar_div_outer_show.style.visibility = "hidden";
+  } else {
+    topbar_div.style.visibility = "visible";
+    topbar_div.style.right = "calc(50vw + 9em)";
+    topbar_div.style.top = "50px";
+    topbar_div_outer_show.style.visibility = "visible";
+  }
+}
+
+window.addEventListener("mousedown", function (e) {
+  if (topbar_div_outer_show.style.visibility == "visible" && e.clientY > 100) {
+    topbar_div.style.visibility = "hidden";
+    topbar_div.style.right = "40%";
+    topbar_div.style.top = "0px";
+    topbar_div_outer_show.style.visibility = "hidden";
+  }
+});

@@ -8,40 +8,97 @@
   </head>
   <body onresize="browser_resize();" onload="body_init();">
     <!--Top bar-->
-    <div class="div-topbar">
+    <div id="topbar-id">
       <!--topbar blogger-->
-      <div id="div-a-blogger" class="div-topbar-content">
-        <a id="a-blogger" class="div-topabr-content-a" href="index.html">Acc的博客</a>
+      <div id="topbar-div-blogger-id" class="topbar-div-content-class">
+        <a id="topbar-div-a-blogger-id" href="index.html">Acc的博客</a>
       </div>
-      <!--left topbar-->
-      <div id="div-div-topbar">
+      <!--topbar content-->
+      <div id="topbar-div-id">
         <!--topbar articles-->
-        <div id="div-a-articles" class="div-topbar-content">
-          <a href="articles.html"><img class="div-topbar-content-img" src="image/articles.png" /></a>
-          <a id="a-articles" class="div-topabr-content-a" href="articles.html">文章</a>
+        <div id="topbar-div-articles-id" class="topbar-div-content-class">
+          <a href="articles.html">
+            <img
+              id="topbar-div-img-articles-id"
+              class="topbar-div-content-img-class"
+              src="image/articles.png"
+              onmouseover="set_topbar_articles_color(true)"
+              onmouseleave="set_topbar_articles_color(false)"
+          /></a>
+          <a
+            id="topbar-div-a-articles-id"
+            href="articles.html"
+            onmouseover="set_topbar_articles_color(true)"
+            onmouseleave="set_topbar_articles_color(false)"
+            >文章</a
+          >
           <!--topbar classify-->
-          <div id="div-a-classify" class="div-topbar-content">
-            <a href="classification.html"><img class="div-topbar-content-img" src="image/classification.png" /></a>
-            <a id="a-classify" class="div-topabr-content-a" href="classification.html">分类</a>
+          <div id="topbar-div-classify-id" class="topbar-div-content-class">
+            <a href="classification.html">
+              <img
+                id="topbar-div-img-classification-id"
+                class="topbar-div-content-img-class"
+                src="image/classification.png"
+                onmouseover="set_topbar_classification_color(true)"
+                onmouseleave="set_topbar_classification_color(false)"
+            /></a>
+            <a
+              id="topbar-div-a-classify-id"
+              href="classification.html"
+              onmouseover="set_topbar_classification_color(true)"
+              onmouseleave="set_topbar_classification_color(false)"
+              >分类</a
+            >
           </div>
         </div>
-        <!--topbar about-->
-        <div id="div-a-about" class="div-topbar-content">
-          <a href="about.html"><img class="div-topbar-content-img" src="image/about.png" /></a>
-          <a id="a-about" class="div-topabr-content-a" href="about.html">关于</a>
-        </div>
         <!--topbar projects-->
-        <div id="div-a-projects" class="div-topbar-content">
-          <a href="projects.html"><img class="div-topbar-content-img" src="image/projects.png" /></a>
-          <a id="a-projects" class="div-topabr-content-a" href="projects.html">项目</a>
+        <div id="topbar-div-projects-id" class="topbar-div-content-class">
+          <a href="projects.html">
+            <img
+              id="topbar-div-img-projects-id"
+              class="topbar-div-content-img-class"
+              src="image/projects.png"
+              onmouseover="set_topbar_projects_color(true)"
+              onmouseleave="set_topbar_projects_color(false)"
+          /></a>
+          <a
+            id="topbar-div-a-projects-id"
+            href="projects.html"
+            onmouseover="set_topbar_projects_color(true)"
+            onmouseleave="set_topbar_projects_color(false)"
+            >项目</a
+          >
+        </div>
+        <!--topbar about-->
+        <div id="topbar-div-about-id" class="topbar-div-content-class">
+          <a href="about.html">
+            <img
+              id="topbar-div-img-about-id"
+              class="topbar-div-content-img-class"
+              src="image/about.png"
+              onmouseover="set_topbar_about_color(true)"
+              onmouseleave="set_topbar_about_color(false)"
+          /></a>
+          <a id="topbar-div-a-about-id" href="about.html" onmouseover="set_topbar_about_color(true)" onmouseleave="set_topbar_about_color(false)"
+            >关于</a
+          >
         </div>
       </div>
       <!--topbar more-->
-      <div id="div-more" class="div-topbar-content" onclick="div_more_click();">
-        <img id="div-more-img" src="image/more.png" draggable="false" />
+      <div id="topbar-div-more-id" class="topbar-div-content-class" onclick="div_more_click();">
+        <img
+          id="topbar-div-img-more-id"
+          src="image/more.png"
+          draggable="false"
+          onmouseover="this.src = 'image/more_over.png'"
+          onmouseleave="this.src = 'image/more.png'"
+        />
       </div>
     </div>
-
+    <!--topbar more show-->
+    <div id="topbar-div-outer-show-id"></div>
+    <!--content-->
+    <div id="content-id"></div>
     <!--script-->
     <script src="js/general.js"></script>
   </body>

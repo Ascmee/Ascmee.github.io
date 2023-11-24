@@ -13,8 +13,12 @@
 @font-face {
   font-family: "LXGW WenKai Mono Light";
   src: url("fonts/LXGWWenKaiMono-Light.ttf");
+  font-weight: lighter;
 }
-
+/* html */
+html {
+  margin: 0;
+}
 /* body */
 body {
   margin: 0px;
@@ -25,8 +29,23 @@ a {
   color: black;
 }
 /* class */
+/* topbar div */
+.topbar-div-content-class {
+  position: absolute;
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+/* topbar img */
+.topbar-div-content-img-class {
+  height: 20px;
+  width: 20px;
+  transform: translate(-10%, 0);
+  display: flex;
+}
+/* id */
 /* topbar */
-.div-topbar {
+#topbar-id {
   font-family: "LXGW WenKai Mono Bold";
   background-color: rgb(242, 242, 242);
   position: absolute;
@@ -34,62 +53,69 @@ a {
   width: 100%;
 }
 /* topbar div */
-.div-topbar-content {
-  position: absolute;
-  height: 70px;
-  display: flex;
-  align-items: center;
-}
-/* topbar img */
-.div-topbar-content-img {
-  height: 20px;
-  width: 20px;
-  transform: translate(-10%, 0);
-  display: flex;
-}
-/* id */
-/* topbar div */
-#div-a-blogger {
+#topbar-div-blogger-id {
   left: 30%;
-  transform: translate(-50%, 0);
 }
 
-#div-div-topbar {
+#topbar-div-a-blogger-id {
+  font-size: 25px;
+}
+
+#topbar-div-id {
   position: absolute;
   right: 40%;
+  z-index: 100;
+  visibility: hidden;
 }
 
-#div-a-articles {
+#topbar-div-articles-id {
   transform: translate(0, 0);
   width: max-content;
 }
 
-#div-a-classify {
+#topbar-div-classify-id {
   transform: translate(150%, 0);
   width: max-content;
 }
 
-#div-a-projects {
+#topbar-div-projects-id {
   transform: translate(300%, 0);
   width: max-content;
 }
 
-#div-a-about {
+#topbar-div-about-id {
   transform: translate(450%, 0);
   width: max-content;
 }
 
-#div-more {
-  left: 5px;
+#topbar-div-more-id {
+  right: 5px;
   visibility: hidden;
 }
 
-#div-more-img {
+#topbar-div-img-more-id {
   height: 20px;
   width: 20px;
   cursor: pointer;
 }
 
-#a-blogger {
-  font-size: 30px;
+#topbar-div-outer-show-id {
+  background-color: rgb(242, 242, 242);
+  border-bottom-style: solid;
+  border-bottom-color: black;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  height: 30px;
+  top: 70px;
+  width: 100%;
+  z-index: 99;
+  position: absolute;
+  visibility: hidden;
+}
+
+#content-id {
+  width: 100%;
+  position: absolute;
+  top: 70px;
+  z-index: 50;
 }
