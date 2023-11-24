@@ -10,18 +10,19 @@ const topbar_div_a_classification = document.getElementById("topbar-div-a-classi
 const topbar_div_a_projects = document.getElementById("topbar-div-a-projects-id");
 const topbar_div_a_about = document.getElementById("topbar-div-a-about-id");
 const topbar_div_outer_show = document.getElementById("topbar-div-outer-show-id");
+const bottom_a_information = document.getElementById("bottom-a-information-id");
 // width
 var screen_width = screen.width;
 var time_over_hundred = true;
 
 function body_init() {
   var window_width = window.outerWidth;
-  if (window_width / screen_width >= 0.5 && screen_width >= 500) {
-    topbar_div_blogger.style.left = (window_width / screen_width - 0.5) * 60 + 1 + "%";
+  if (window_width / screen_width >= 0.5 && !isMobile()) {
+    topbar_div_blogger.style.left = (window_width / screen_width - 0.5) * 50 + 2 + "%";
     topbar_div.style.visibility = "visible";
     topbar_div_more.style.visibility = "hidden";
   } else {
-    topbar_div_blogger.style.left = "1%";
+    topbar_div_blogger.style.left = "2%";
     topbar_div_more.style.visibility = "visible";
     topbar_div.style.right = "100%";
     topbar_div.style.visibility = "hidden";
@@ -33,14 +34,14 @@ function browser_resize() {
   if (!time_over_hundred) return;
   time_over_hundred = false;
   if (window_width / screen_width >= 0.5 && screen_width >= 500) {
-    topbar_div_blogger.style.left = (window_width / screen_width - 0.5) * 60 + 1 + "%";
+    topbar_div_blogger.style.left = (window_width / screen_width - 0.5) * 50 + 2 + "%";
     topbar_div.style.visibility = "visible";
     topbar_div_more.style.visibility = "hidden";
     topbar_div.style.right = "40%";
     topbar_div.style.top = "0px";
     topbar_div_outer_show.style.visibility = "hidden";
   } else {
-    topbar_div_blogger.style.left = "1%";
+    topbar_div_blogger.style.left = "2%";
     topbar_div_more.style.visibility = "visible";
     if (topbar_div_outer_show.style.visibility != "visible") {
       topbar_div.style.visibility = "hidden";
@@ -105,6 +106,12 @@ function div_more_click() {
   }
 }
 
+function isMobile() {
+  if (navigator.userAgent.match(/Mobi/i) || navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/iPhone/i)) {
+    return true;
+  } else return false;
+}
+
 window.addEventListener("mousedown", function (e) {
   if (topbar_div_outer_show.style.visibility == "visible" && e.clientY > 100) {
     topbar_div.style.visibility = "hidden";
@@ -112,4 +119,12 @@ window.addEventListener("mousedown", function (e) {
     topbar_div.style.top = "0px";
     topbar_div_outer_show.style.visibility = "hidden";
   }
+});
+
+bottom_a_information.addEventListener("mouseenter", function () {
+  this.style.color = "#2a6df4";
+});
+
+bottom_a_information.addEventListener("mouseleave", function () {
+  this.style.color = "gray";
 });

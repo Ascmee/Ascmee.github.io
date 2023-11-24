@@ -1,0 +1,48 @@
+/* font */
+@font-face {
+  font-family: "LXGW WenKai Mono";
+  src: url("fonts/LXGWWenKaiMono-Regular.ttf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "LXGW WenKai Mono Bold";
+  src: url("fonts/LXGWWenKaiMono-Bold.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "LXGW WenKai Mono Light";
+  src: url("fonts/LXGWWenKaiMono-Light.ttf");
+  font-weight: lighter;
+}
+
+#content-about-me-id {
+  position: absolute;
+  font-size: 40px;
+  font-weight: bold;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+#content-time-id {
+  font-family: "LXGW WenKai Mono Light";
+  font-size: 16px;
+  top: 110px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  position: absolute;
+}
+
+#content-about-me-content-id {
+  font-family: "LXGW WenKai Mono";
+  font-size: 22px;
+  position: absolute;
+  width: fit-content;
+  left: 50%;
+  top: 160px;
+  transform: translate(-50%, 0);
+  padding-left: 15px;
+  padding-right: 15px;
+}

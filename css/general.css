@@ -2,6 +2,7 @@
 @font-face {
   font-family: "LXGW WenKai Mono";
   src: url("fonts/LXGWWenKaiMono-Regular.ttf");
+  font-weight: normal;
 }
 
 @font-face {
@@ -21,7 +22,7 @@ html {
 }
 /* body */
 body {
-  margin: 0px;
+  margin: 0;
 }
 /* all a */
 a {
@@ -48,13 +49,12 @@ a {
 #topbar-id {
   font-family: "LXGW WenKai Mono Bold";
   background-color: rgb(242, 242, 242);
-  position: absolute;
   height: 70px;
   width: 100%;
 }
 /* topbar div */
 #topbar-div-blogger-id {
-  left: 30%;
+  left: 27%;
 }
 
 #topbar-div-a-blogger-id {
@@ -102,9 +102,11 @@ a {
 #topbar-div-outer-show-id {
   background-color: rgb(242, 242, 242);
   border-bottom-style: solid;
-  border-bottom-color: black;
+  border-bottom-color: gray;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  border-top-style: solid;
+  border-top-color: gray;
   height: 30px;
   top: 70px;
   width: 100%;
@@ -112,10 +114,45 @@ a {
   position: absolute;
   visibility: hidden;
 }
-
+/* content */
 #content-id {
+  font-family: "LXGW WenKai Mono Bold";
   width: 100%;
-  position: absolute;
-  top: 70px;
+  height: 800px;
   z-index: 50;
+  position: relative;
+  overflow: hidden;
+}
+
+#content-p-id {
+  font-family: "LXGW WenKai Mono Bold";
+  font-size: 24px;
+  top: 40%;
+  left: 50%;
+  position: absolute;
+  width: max-content;
+  transform: translate(-50%, -50%);
+}
+
+#content-p-author-id {
+  font-family: "LXGW WenKai Mono Light";
+  top: calc(40% + 3em);
+  left: 50%;
+  position: absolute;
+  width: max-content;
+  transform: translate(-50%, 0);
+}
+/* bottom */
+#bottom-id {
+  position: relative;
+  left: 50%;
+  font-family: "LXGW WenKai Mono";
+  color: gray;
+  height: fit-content;
+  width: fit-content;
+  transform: translate(-50%, 0);
+}
+
+#bottom-a-information-id {
+  color: gray;
 }
