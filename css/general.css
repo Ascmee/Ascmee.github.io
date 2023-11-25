@@ -1,21 +1,40 @@
 /* font */
 @font-face {
   font-family: "LXGW WenKai Mono";
+  src: url("fonts/LXGWWenKaiMono-Light.ttf");
+  font-weight: lighter;
+}
+
+@font-face {
+  font-family: "LXGW WenKai Mono";
   src: url("fonts/LXGWWenKaiMono-Regular.ttf");
   font-weight: normal;
 }
 
 @font-face {
-  font-family: "LXGW WenKai Mono Bold";
+  font-family: "LXGW WenKai Mono";
   src: url("fonts/LXGWWenKaiMono-Bold.ttf");
   font-weight: bold;
 }
 
 @font-face {
-  font-family: "LXGW WenKai Mono Light";
-  src: url("fonts/LXGWWenKaiMono-Light.ttf");
+  font-family: "LXGW WenKai";
+  src: url("fonts/LXGWWenKai-Light.ttf");
   font-weight: lighter;
 }
+
+@font-face {
+  font-family: "LXGW WenKai";
+  src: url("fonts/LXGWWenKai-Regular.ttf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "LXGW WenKai Bold";
+  src: url("fonts/LXGWWenKai-Bold.ttf");
+  font-weight: bold;
+}
+
 /* html */
 html {
   margin: 0;
@@ -47,10 +66,11 @@ a {
 /* id */
 /* topbar */
 #topbar-id {
-  font-family: "LXGW WenKai Mono Bold";
-  background-color: rgb(242, 242, 242);
-  height: 70px;
+  font-family: "LXGW WenKai Mono";
+  font-weight: bold;
   width: 100%;
+  height: 70px;
+  background-color: rgb(242, 242, 242);
 }
 /* topbar div */
 #topbar-div-blogger-id {
@@ -69,23 +89,23 @@ a {
 }
 
 #topbar-div-articles-id {
-  transform: translate(0, 0);
   width: max-content;
+  transform: translate(0, 0);
 }
 
 #topbar-div-classify-id {
-  transform: translate(150%, 0);
   width: max-content;
+  transform: translate(150%, 0);
 }
 
 #topbar-div-projects-id {
-  transform: translate(300%, 0);
   width: max-content;
+  transform: translate(300%, 0);
 }
 
 #topbar-div-about-id {
-  transform: translate(450%, 0);
   width: max-content;
+  transform: translate(450%, 0);
 }
 
 #topbar-div-more-id {
@@ -94,12 +114,18 @@ a {
 }
 
 #topbar-div-img-more-id {
-  height: 20px;
   width: 20px;
+  height: 20px;
   cursor: pointer;
 }
 
 #topbar-div-outer-show-id {
+  width: 100%;
+  height: 30px;
+  position: absolute;
+  top: 70px;
+  z-index: 99;
+  visibility: hidden;
   background-color: rgb(242, 242, 242);
   border-bottom-style: solid;
   border-bottom-color: gray;
@@ -107,50 +133,50 @@ a {
   border-bottom-right-radius: 5px;
   border-top-style: solid;
   border-top-color: gray;
-  height: 30px;
-  top: 70px;
-  width: 100%;
-  z-index: 99;
-  position: absolute;
-  visibility: hidden;
 }
 /* content */
 #content-id {
-  font-family: "LXGW WenKai Mono Bold";
-  width: 100%;
-  height: 800px;
-  z-index: 50;
+  font-family: "LXGW WenKai";
+  width: max-content;
+  min-width: 1000px;
+  height: fit-content;
+  min-height: 780px;
   position: relative;
+  margin-left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 50;
   overflow: hidden;
 }
 
 #content-p-id {
-  font-family: "LXGW WenKai Mono Bold";
+  font-weight: bold;
   font-size: 24px;
+  width: max-content;
+  position: absolute;
   top: 40%;
   left: 50%;
-  position: absolute;
-  width: max-content;
   transform: translate(-50%, -50%);
 }
 
 #content-p-author-id {
-  font-family: "LXGW WenKai Mono Light";
+  font-family: "LXGW WenKai";
+  width: max-content;
+  position: absolute;
   top: calc(40% + 3em);
   left: 50%;
-  position: absolute;
-  width: max-content;
   transform: translate(-50%, 0);
 }
 /* bottom */
 #bottom-id {
+  font-family: "LXGW WenKai Mono";
+  width: fit-content;
+  height: fit-content;
   position: relative;
   left: 50%;
-  font-family: "LXGW WenKai Mono";
-  color: gray;
-  height: fit-content;
-  width: fit-content;
+  padding-top: 22px;
+  padding-bottom: 23px;
   transform: translate(-50%, 0);
+  color: gray;
 }
 
 #bottom-a-information-id {

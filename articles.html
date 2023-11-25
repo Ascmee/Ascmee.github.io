@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home|Acc的博客</title>
+    <title>Articles | Acc的博客</title>
     <link href="css/general.css" rel="stylesheet" type="text/css" />
+    <link href="css/articles.css" rel="stylesheet" type="text/css" />
   </head>
   <body onresize="browser_resize();" onload="body_init();">
     <!--Top bar-->
@@ -26,14 +27,14 @@
                 id="topbar-div-img-classification-id"
                 class="topbar-div-content-img-class"
                 src="image/classification.png"
-                onmouseover="set_topbar_classification_color(true)"
-                onmouseleave="set_topbar_classification_color(false)"
+                onmouseover="set_topbar_classification_color(true,false)"
+                onmouseleave="set_topbar_classification_color(false,false)"
             /></a>
             <a
               id="topbar-div-a-classify-id"
               href="classification.html"
-              onmouseover="set_topbar_classification_color(true)"
-              onmouseleave="set_topbar_classification_color(false)"
+              onmouseover="set_topbar_classification_color(true,false)"
+              onmouseleave="set_topbar_classification_color(false,false)"
               >分类</a
             >
           </div>
@@ -45,14 +46,14 @@
               id="topbar-div-img-projects-id"
               class="topbar-div-content-img-class"
               src="image/projects.png"
-              onmouseover="set_topbar_projects_color(true)"
-              onmouseleave="set_topbar_projects_color(false)"
+              onmouseover="set_topbar_projects_color(true,false)"
+              onmouseleave="set_topbar_projects_color(false,false)"
           /></a>
           <a
             id="topbar-div-a-projects-id"
             href="projects.html"
-            onmouseover="set_topbar_projects_color(true)"
-            onmouseleave="set_topbar_projects_color(false)"
+            onmouseover="set_topbar_projects_color(true,false)"
+            onmouseleave="set_topbar_projects_color(false,false)"
             >项目</a
           >
         </div>
@@ -63,8 +64,8 @@
               id="topbar-div-img-about-id"
               class="topbar-div-content-img-class"
               src="image/about.png"
-              onmouseover="set_topbar_about_color(true)"
-              onmouseleave="set_topbar_about_color(false)"
+              onmouseover="set_topbar_about_color(true,false)"
+              onmouseleave="set_topbar_about_color(false,false)"
           /></a>
           <a id="topbar-div-a-about-id" href="about.html" onmouseover="set_topbar_about_color(true)" onmouseleave="set_topbar_about_color(false)"
             >关于</a
@@ -85,8 +86,15 @@
     <!--topbar more show-->
     <div id="topbar-div-outer-show-id"></div>
     <!--content-->
-    <div id="content-id"></div>
-
+    <div id="content-id">
+      <div id="content-page-id">
+        <div id="content-page-title-id"><p id="content-page-title-p-id">Articles</p></div>
+        <div id="content-page-info-id">本页面用于记录我的学习笔记</div>
+        <div id="content-page-content-id">
+          <!--content-->
+        </div>
+      </div>
+    </div>
     <div id="bottom-id">
       <p id="bottom-information-id">Powered by <a id="bottom-a-information-id" href="https://github.com/Ascmee">Acc</a></p>
     </div>

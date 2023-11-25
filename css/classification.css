@@ -1,74 +1,90 @@
 #content-id {
+  font-weight: bold;
+  width: 1000px;
   position: relative;
-  width: 100%;
-  height: 800px;
   overflow: hidden;
 }
 
+#content-page-title-id {
+  height: fit-content;
+  margin-top: 60px;
+}
+
+#content-page-title-p-id {
+  font-size: 40px;
+  width: fit-content;
+  height: fit-content;
+  margin: 0;
+  margin-left: 50%;
+  transform: translate(-50%, 0);
+}
+
+#content-page-info-id {
+  font-weight: normal;
+  width: fit-content;
+  margin-top: 20px;
+  margin-left: 50%;
+  transform: translate(-50%, 0);
+}
+
 #content-div-java-id {
-  position: absolute;
-  top: 100px;
-  left: 50%;
+  width: fit-content;
+  margin-top: 50px;
+  margin-left: 50%;
   transform: translate(-50%, 0);
 }
 
 #content-div-cocpp-id {
-  position: absolute;
-  top: 250px;
-  left: 36%;
+  width: fit-content;
+  margin-left: 32%;
   transform: translate(-50%, 0);
 }
 
 #content-div-asm-id {
-  position: absolute;
-  top: 280px;
-  left: 70%;
+  width: fit-content;
+  margin-top: 0px;
+  margin-left: 78%;
   transform: translate(-50%, 0);
 }
 
 #content-div-python-id {
-  position: absolute;
-  top: 360px;
-  left: 61%;
+  width: fit-content;
+  margin-top: 0px;
+  margin-left: 57%;
   transform: translate(-50%, 0);
 }
 
 #content-div-web-id {
-  position: absolute;
-  top: 400px;
-  left: 48%;
+  width: fit-content;
+  margin-top: 0px;
+  margin-left: 43%;
   transform: translate(-50%, 0);
 }
 
 #content-div-ds-id {
-  position: absolute;
-  top: 500px;
-  left: 33%;
+  width: fit-content;
+  margin-top: 0px;
+  margin-left: 18%;
   transform: translate(-50%, 0);
 }
 
 #content-div-cs-id {
-  position: absolute;
-  top: 550px;
-  left: 58%;
+  width: fit-content;
+  margin-top: 0px;
+  margin-left: 61%;
   transform: translate(-50%, 0);
 }
 
 #content-div-linux-id {
-  position: absolute;
-  top: 600px;
-  left: 70%;
+  width: fit-content;
+  margin-top: 0px;
+  margin-left: 82%;
   transform: translate(-50%, 0);
 }
 
 #content-div-other-id {
-  position: absolute;
-  top: 700px;
-  left: 46%;
+  width: fit-content;
+  margin-top: 0px;
+  margin-left: 42%;
   transform: translate(-50%, 0);
-}
-
-#box-up {
-  width: 100%;
-  background-color: white;
 }

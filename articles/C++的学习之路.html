@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>C++的学习之路 | Acc的博客</title>
+    <link href="../css/general.css" rel="stylesheet" type="text/css" />
+    <link href="../css/page.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body onresize="browser_resize();" onload="body_init();">
+    <!--Top bar-->
+    <div id="topbar-id">
+      <!--topbar blogger-->
+      <div id="topbar-div-blogger-id" class="topbar-div-content-class">
+        <a id="topbar-div-a-blogger-id" href="../index.html">Acc的博客</a>
+      </div>
+      <!--topbar content-->
+      <div id="topbar-div-id">
+        <!--topbar articles-->
+        <div id="topbar-div-articles-id" class="topbar-div-content-class">
+          <a href="../articles.html">
+            <img
+              id="topbar-div-img-articles-id"
+              class="topbar-div-content-img-class"
+              src="../image/articles.png"
+              onmouseover="set_topbar_articles_color(true,true)"
+              onmouseleave="set_topbar_articles_color(false,true)"
+          /></a>
+          <a
+            id="topbar-div-a-articles-id"
+            href="../articles.html"
+            onmouseover="set_topbar_articles_color(true,true)"
+            onmouseleave="set_topbar_articles_color(false,true)"
+            >文章</a
+          >
+          <!--topbar classify-->
+          <div id="topbar-div-classify-id" class="topbar-div-content-class">
+            <a href="../classification.html">
+              <img
+                id="topbar-div-img-classification-id"
+                class="topbar-div-content-img-class"
+                src="../image/classification.png"
+                onmouseover="set_topbar_classification_color(true,true)"
+                onmouseleave="set_topbar_classification_color(false,true)"
+            /></a>
+            <a
+              id="topbar-div-a-classify-id"
+              href="../classification.html"
+              onmouseover="set_topbar_classification_color(true,true)"
+              onmouseleave="set_topbar_classification_color(false,true)"
+              >分类</a
+            >
+          </div>
+        </div>
+        <!--topbar projects-->
+        <div id="topbar-div-projects-id" class="topbar-div-content-class">
+          <a href="../projects.html">
+            <img
+              id="topbar-div-img-projects-id"
+              class="topbar-div-content-img-class"
+              src="../image/projects.png"
+              onmouseover="set_topbar_projects_color(true,true)"
+              onmouseleave="set_topbar_projects_color(false,true)"
+          /></a>
+          <a
+            id="topbar-div-a-projects-id"
+            href="../projects.html"
+            onmouseover="set_topbar_projects_color(true,true)"
+            onmouseleave="set_topbar_projects_color(false,true)"
+            >项目</a
+          >
+        </div>
+        <!--topbar about-->
+        <div id="topbar-div-about-id" class="topbar-div-content-class">
+          <a href="//about.html">
+            <img
+              id="topbar-div-img-about-id"
+              class="topbar-div-content-img-class"
+              src="../image/about.png"
+              onmouseover="set_topbar_about_color(true,true)"
+              onmouseleave="set_topbar_about_color(false,true)"
+          /></a>
+          <a id="topbar-div-a-about-id" href="../about.html" onmouseover="set_topbar_about_color(true)" onmouseleave="set_topbar_about_color(false)"
+            >关于</a
+          >
+        </div>
+      </div>
+      <!--topbar more-->
+      <div id="topbar-div-more-id" class="topbar-div-content-class" onclick="div_more_click();">
+        <img
+          id="topbar-div-img-more-id"
+          src="image/more.png"
+          draggable="false"
+          onmouseover="this.src = 'image/more_over.png'"
+          onmouseleave="this.src = 'image/more.png'"
+        />
+      </div>
+    </div>
+    <!--topbar more show-->
+    <div id="topbar-div-outer-show-id"></div>
+    <!--content-->
+    <div id="content-id">
+      <div id="content-page-id">
+        <div id="content-page-title-id">
+          <p id="content-page-title-p-id">Articles</p>
+        </div>
+        <div id="content-page-info-id">本页面用于记录我的学习笔记</div>
+        <div class="content-page-content-class">
+          <ul>
+            <div class="content-page-date-class">2023</div>
+            <div class="content-page-box-class">
+              <li>
+                <div class="content-page-content-title-class">
+                  <a href="">C++学习之路</a>
+                </div>
+              </li>
+              <div class="content-page-content-date-class">09/13</div>
+            </div>
+            <div class="content-page-box-class">
+              <li>
+                <div class="content-page-content-title-class">
+                  <a href="">Java学习之路</a>
+                </div>
+              </li>
+              <div class="content-page-content-date-class">09/09</div>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="bottom-id">
+      <p id="bottom-information-id">Powered by <a id="bottom-a-information-id" href="https://github.com/Ascmee">Acc</a></p>
+    </div>
+
+    <!--script-->
+    <script src="../js/general.js"></script>
+  </body>
+</html>

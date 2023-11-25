@@ -60,35 +60,43 @@ function set_topbar_color(topbar_div_img_id, topbar_div_img_path, topbar_div_a_i
   document.getElementById(topbar_div_a_id).style.color = topbar_div_a_color;
 }
 
-function set_topbar_articles_color(over) {
+function set_topbar_articles_color(over, articles) {
+  var rootPath = "";
+  if (articles) rootPath = "../";
   if (over) {
-    set_topbar_color("topbar-div-img-articles-id", "image/articles_over.png", "topbar-div-a-articles-id", "#2a6df4");
+    set_topbar_color("topbar-div-img-articles-id", rootPath + "image/articles_over.png", "topbar-div-a-articles-id", "#2a6df4");
   } else {
-    set_topbar_color("topbar-div-img-articles-id", "image/articles.png", "topbar-div-a-articles-id", "black");
+    set_topbar_color("topbar-div-img-articles-id", rootPath + "image/articles.png", "topbar-div-a-articles-id", "black");
   }
 }
 
-function set_topbar_classification_color(over) {
+function set_topbar_classification_color(over, articles) {
+  var rootPath = "";
+  if (articles) rootPath = "../";
   if (over) {
-    set_topbar_color("topbar-div-img-classification-id", "image/classification_over.png", "topbar-div-a-classify-id", "#2a6df4");
+    set_topbar_color("topbar-div-img-classification-id", rootPath + "image/classification_over.png", "topbar-div-a-classify-id", "#2a6df4");
   } else {
-    set_topbar_color("topbar-div-img-classification-id", "image/classification.png", "topbar-div-a-classify-id", "black");
+    set_topbar_color("topbar-div-img-classification-id", rootPath + "image/classification.png", "topbar-div-a-classify-id", "black");
   }
 }
 
-function set_topbar_projects_color(over) {
+function set_topbar_projects_color(over, articles) {
+  var rootPath = "";
+  if (articles) rootPath = "../";
   if (over) {
-    set_topbar_color("topbar-div-img-projects-id", "image/projects_over.png", "topbar-div-a-projects-id", "#2a6df4");
+    set_topbar_color("topbar-div-img-projects-id", rootPath + "image/projects_over.png", "topbar-div-a-projects-id", "#2a6df4");
   } else {
-    set_topbar_color("topbar-div-img-projects-id", "image/projects.png", "topbar-div-a-projects-id", "black");
+    set_topbar_color("topbar-div-img-projects-id", rootPath + "image/projects.png", "topbar-div-a-projects-id", "black");
   }
 }
 
-function set_topbar_about_color(over) {
+function set_topbar_about_color(over, articles) {
+  var rootPath = "";
+  if (articles) rootPath = "../";
   if (over) {
-    set_topbar_color("topbar-div-img-about-id", "image/about_over.png", "topbar-div-a-about-id", "#2a6df4");
+    set_topbar_color("topbar-div-img-about-id", rootPath + "image/about_over.png", "topbar-div-a-about-id", "#2a6df4");
   } else {
-    set_topbar_color("topbar-div-img-about-id", "image/about.png", "topbar-div-a-about-id", "black");
+    set_topbar_color("topbar-div-img-about-id", rootPath + "image/about.png", "topbar-div-a-about-id", "black");
   }
 }
 
