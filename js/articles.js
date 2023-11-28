@@ -1,18 +1,39 @@
-var name_arr = { "C++的学习之路": "2023/09/13", Java的学习之路: "2022/09/09" };
+var name_arr = [
+  { date: "2022/01/09/09:31:33", title: "C++的学习之路2" },
+  { date: "2022/07/12/09:31:33", title: "C++的学习之路6" },
+  { date: "2022/02/12/09:31:33", title: "C++的学习之路4" },
+  { date: "2023/01/09/09:31:33", title: "C++的学习之路1" },
+  { date: "2023/01/09/09:31:34", title: "Template" },
+];
+
+name_arr.sort(function (val1, val2) {
+  var result = val2.date.split("/")[0] - val1.date.split("/")[0];
+  if (result != 0) return result;
+  result = val2.date.split("/")[1] - val1.date.split("/")[1];
+  if (result != 0) return result;
+  result = val2.date.split("/")[2] - val1.date.split("/")[2];
+  if (result != 0) return result;
+  result = val2.date.split("/")[3].split(":")[0] - val1.date.split("/")[3].split(":")[0];
+  if (result != 0) return result;
+  result = val2.date.split("/")[3].split(":")[1] - val1.date.split("/")[3].split(":")[1];
+  if (result != 0) return result;
+  return val2.date.split("/")[3].split(":")[2] - val1.date.split("/")[3].split(":")[2];
+});
+
 var content_page_content = document.querySelector("#content-page-content-id");
 var now_element = null;
-for (val in name_arr) {
+for (var i = 0; i < name_arr.length; i++) {
   if (now_element == null) {
     now_element = document.createElement("ul");
-    now_element.id = name_arr[val].split("/")[0];
+    now_element.id = name_arr[i].date.split("/")[0];
     content_page_content.appendChild(now_element);
     now_element.appendChild(document.createElement("div"));
     now_element.lastElementChild.className = "content-page-date-class";
     now_element.lastElementChild.innerHTML = now_element.id;
-  } else if (now_element.id != name_arr[val].split("/")[0]) {
+  } else if (now_element.id != name_arr[i].date.split("/")[0]) {
     now_element = document.createElement("ul");
     content_page_content.appendChild(now_element);
-    now_element.id = name_arr[val].split("/")[0];
+    now_element.id = name_arr[i].date.split("/")[0];
     content_page_content.appendChild(now_element);
     now_element.appendChild(document.createElement("div"));
     now_element.lastElementChild.className = "content-page-date-class";
@@ -24,25 +45,15 @@ for (val in name_arr) {
   now_element.lastElementChild.lastElementChild.appendChild(document.createElement("div"));
   now_element.lastElementChild.lastElementChild.lastElementChild.className = "content-page-content-title-class";
   now_element.lastElementChild.lastElementChild.lastElementChild.appendChild(document.createElement("a"));
-  now_element.lastElementChild.lastElementChild.lastElementChild.lastElementChild.href = "articles/" + val + ".html";
-  now_element.lastElementChild.lastElementChild.lastElementChild.lastElementChild.innerHTML = val;
+  now_element.lastElementChild.lastElementChild.lastElementChild.lastElementChild.href = "articles/" + name_arr[i].title + ".html";
+  now_element.lastElementChild.lastElementChild.lastElementChild.lastElementChild.innerHTML = name_arr[i].title;
   now_element.lastElementChild.appendChild(document.createElement("div"));
   now_element.lastElementChild.lastElementChild.className = "content-page-content-date-class";
-  now_element.lastElementChild.lastElementChild.innerHTML = name_arr[val].split("/")[1] + "/" + name_arr[val].split("/")[2];
+  now_element.lastElementChild.lastElementChild.innerHTML = name_arr[i].date.split("/")[1] + "/" + name_arr[i].date.split("/")[2];
 }
 
 var content_page_box = document.querySelectorAll(".content-page-box-class");
 Array.from(content_page_box).forEach(function (val) {
-  val.addEventListener("mouseenter", function () {
-    val.firstElementChild.style.color = "#2a6df4";
-    val.firstElementChild.firstElementChild.firstElementChild.style.color = "#2a6df4";
-    val.style.borderBottomColor = "#2a6df4";
-  });
-  val.addEventListener("mouseleave", function () {
-    val.firstElementChild.style.color = "#dedede";
-    val.firstElementChild.firstElementChild.firstElementChild.style.color = "#000000";
-    val.style.borderBottomColor = "#dedede";
-  });
   val.addEventListener("mouseup", function () {
     location.href = val.firstElementChild.firstElementChild.firstElementChild.href;
   });

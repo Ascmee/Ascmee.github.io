@@ -1,12 +1,20 @@
 .content-page-item-class {
   height: 80px;
   margin-left: 50px;
+  display: flex;
+  align-items: center;
 }
 
 .content-page-item-a-class {
   font-size: 30px;
   font-weight: bold;
+  height: fit-content;
   color: #2a6df4;
+}
+
+.content-page-item-span-class {
+  height: fit-content;
+  margin-left: auto;
 }
 
 .content-page-item-a-class:hover {

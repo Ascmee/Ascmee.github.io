@@ -11,11 +11,14 @@ const topbar_div_a_projects = document.getElementById("topbar-div-a-projects-id"
 const topbar_div_a_about = document.getElementById("topbar-div-a-about-id");
 const topbar_div_outer_show = document.getElementById("topbar-div-outer-show-id");
 const bottom_a_information = document.getElementById("bottom-a-information-id");
+const head_element = document.querySelector("head");
 // width
 var screen_width = screen.width;
 var time_over_hundred = true;
 
 function body_init() {
+  if (isMobile()) {
+  }
   var window_width = window.outerWidth;
   if (window_width / screen_width >= 0.5 && !isMobile()) {
     topbar_div_blogger.style.left = (window_width / screen_width - 0.5) * 50 + 2 + "%";

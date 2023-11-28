@@ -33,24 +33,24 @@
             onmouseleave="set_topbar_articles_color(false,false)"
             >文章</a
           >
-          <!--topbar classify-->
-          <div id="topbar-div-classify-id" class="topbar-div-content-class">
-            <a href="classification.html">
-              <img
-                id="topbar-div-img-classification-id"
-                class="topbar-div-content-img-class"
-                src="image/classification.png"
-                onmouseover="set_topbar_classification_color(true,false)"
-                onmouseleave="set_topbar_classification_color(false,false)"
-            /></a>
-            <a
-              id="topbar-div-a-classify-id"
-              href="classification.html"
+        </div>
+        <!--topbar classify-->
+        <div id="topbar-div-classify-id" class="topbar-div-content-class">
+          <a href="classification.html">
+            <img
+              id="topbar-div-img-classification-id"
+              class="topbar-div-content-img-class"
+              src="image/classification.png"
               onmouseover="set_topbar_classification_color(true,false)"
               onmouseleave="set_topbar_classification_color(false,false)"
-              >分类</a
-            >
-          </div>
+          /></a>
+          <a
+            id="topbar-div-a-classify-id"
+            href="classification.html"
+            onmouseover="set_topbar_classification_color(true,false)"
+            onmouseleave="set_topbar_classification_color(false,false)"
+            >分类</a
+          >
         </div>
         <!--topbar projects-->
         <div id="topbar-div-projects-id" class="topbar-div-content-class">
@@ -95,15 +95,19 @@
         <div id="content-title-id"><p id="content-title-p-id">About Me</p></div>
         <div id="content-time-id"><p>本页面创建于2023/11/24</p></div>
         <div id="content-content-id">
-          <p class="content-content-p-class">
+          <div class="content-content-p-class">
             本博客仅用于记录我在大学期间的学习情况，练习的项目。查看<a class="content-a-class" href="https://github.com/Ascmee">我的Github主页</a
             >。由于对web的了解十分的浅薄，没有系统的学习，所以本博客借鉴了<a class="content-a-class" href="https://blog.ticks.cc/">Ticks的博客</a
             >，本博客所使用的图标均为<a class="content-a-class" href="https://www.iconfont.cn/">阿里巴巴矢量图标库</a>中的图标，使用的字体为<a
               class="content-a-class"
               href="https://github.com/lxgw/LxgwWenKai"
               >霞鹜文楷</a
-            >。若是在后续学习的web开发，可能会对博客进行修改
-          </p>
+            >。博客使用的代码高亮使用了<a href="https://highlightjs.org/">highlightjs</a>。代码生成图片功能使用了<a
+              href="https://github.com/niklasvh/html2canvas"
+              >html2canvas</a
+            >。
+            <p>若是在后续学习的web开发，可能会对博客进行修改</p>
+          </div>
         </div>
       </div>
     </div>

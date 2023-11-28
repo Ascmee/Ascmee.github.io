@@ -22,6 +22,25 @@ li {
   cursor: pointer;
 }
 
+a {
+  color: black;
+}
+
+.content-page-box-class:hover {
+  border-bottom-color: #2a6df4;
+  transition: 0.5s;
+}
+
+.content-page-box-class:hover a {
+  color: #2a6df4;
+  transition: 0.5s;
+}
+
+.content-page-box-class:hover li {
+  color: #2a6df4;
+  transition: 0.5s;
+}
+
 .content-page-content-title-class {
   font-size: 24px;
   margin-left: 15px;

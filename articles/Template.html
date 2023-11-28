@@ -3,9 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>C++的学习之路 | Acc的博客</title>
+    <!-- title start -->
+    <title>Template | Acc的博客</title>
+    <!-- title end -->
+    <!-- css start -->
     <link href="../css/general.css" rel="stylesheet" type="text/css" />
+    <link href="../highlight/styles/atom-one-dark-reasonable.min.css" rel="stylesheet" type="text/css" />
     <link href="../css/page.css" rel="stylesheet" type="text/css" />
+    <!-- css end-->
+    <script src="../highlight/highlight.min.js"></script>
+    <script type="application/javascript" src="../js/html2canvas.js"></script>
   </head>
   <body onresize="browser_resize();" onload="body_init();">
     <!--Top bar-->
@@ -33,24 +40,24 @@
             onmouseleave="set_topbar_articles_color(false,true)"
             >文章</a
           >
-          <!--topbar classify-->
-          <div id="topbar-div-classify-id" class="topbar-div-content-class">
-            <a href="../classification.html">
-              <img
-                id="topbar-div-img-classification-id"
-                class="topbar-div-content-img-class"
-                src="../image/classification.png"
-                onmouseover="set_topbar_classification_color(true,true)"
-                onmouseleave="set_topbar_classification_color(false,true)"
-            /></a>
-            <a
-              id="topbar-div-a-classify-id"
-              href="../classification.html"
+        </div>
+        <!--topbar classify-->
+        <div id="topbar-div-classify-id" class="topbar-div-content-class">
+          <a href="../classification.html">
+            <img
+              id="topbar-div-img-classification-id"
+              class="topbar-div-content-img-class"
+              src="../image/classification.png"
               onmouseover="set_topbar_classification_color(true,true)"
               onmouseleave="set_topbar_classification_color(false,true)"
-              >分类</a
-            >
-          </div>
+          /></a>
+          <a
+            id="topbar-div-a-classify-id"
+            href="../classification.html"
+            onmouseover="set_topbar_classification_color(true,true)"
+            onmouseleave="set_topbar_classification_color(false,true)"
+            >分类</a
+          >
         </div>
         <!--topbar projects-->
         <div id="topbar-div-projects-id" class="topbar-div-content-class">
@@ -72,7 +79,7 @@
         </div>
         <!--topbar about-->
         <div id="topbar-div-about-id" class="topbar-div-content-class">
-          <a href="//about.html">
+          <a href="../about.html">
             <img
               id="topbar-div-img-about-id"
               class="topbar-div-content-img-class"
@@ -80,7 +87,11 @@
               onmouseover="set_topbar_about_color(true,true)"
               onmouseleave="set_topbar_about_color(false,true)"
           /></a>
-          <a id="topbar-div-a-about-id" href="../about.html" onmouseover="set_topbar_about_color(true)" onmouseleave="set_topbar_about_color(false)"
+          <a
+            id="topbar-div-a-about-id"
+            href="../about.html"
+            onmouseover="set_topbar_about_color(true,true)"
+            onmouseleave="set_topbar_about_color(false,true)"
             >关于</a
           >
         </div>
@@ -89,10 +100,10 @@
       <div id="topbar-div-more-id" class="topbar-div-content-class" onclick="div_more_click();">
         <img
           id="topbar-div-img-more-id"
-          src="image/more.png"
+          src="../image/more.png"
           draggable="false"
-          onmouseover="this.src = 'image/more_over.png'"
-          onmouseleave="this.src = 'image/more.png'"
+          onmouseover="this.src = '../image/more_over.png'"
+          onmouseleave="this.src = '../image/more.png'"
         />
       </div>
     </div>
@@ -101,38 +112,62 @@
     <!--content-->
     <div id="content-id">
       <div id="content-page-id">
-        <div id="content-page-title-id">
-          <p id="content-page-title-p-id">Articles</p>
-        </div>
-        <div id="content-page-info-id">本页面用于记录我的学习笔记</div>
-        <div class="content-page-content-class">
-          <ul>
-            <div class="content-page-date-class">2023</div>
-            <div class="content-page-box-class">
-              <li>
-                <div class="content-page-content-title-class">
-                  <a href="">C++学习之路</a>
-                </div>
-              </li>
-              <div class="content-page-content-date-class">09/13</div>
+        <!-- content title start -->
+        <div id="content-page-title-id">Template</div>
+        <!-- content title end -->
+        <!-- content date start -->
+        <p id="content-page-date-id">2023/01/09</p>
+        <!-- content date end -->
+        <div id="content-page-content-id">
+          <!-- content start -->
+          <p>&nbsp;&nbsp;123</p>
+          <div class="content-page-div-code-class">
+            <div class="content-page-code-button-class">
+              <div class="content-page-code-button-copy-class"></div>
+              <div class="content-page-code-button-toimage-class"></div>
+              <div class="content-page-code-button-number-class"></div>
             </div>
-            <div class="content-page-box-class">
-              <li>
-                <div class="content-page-content-title-class">
-                  <a href="">Java学习之路</a>
+            <table class="content-page-code-table-class">
+              <td class="content-page-code-number-box-class">
+                <div>
+                  <pre class="content-page-code-number-class"><code class="content-code-number"></code></pre>
                 </div>
-              </li>
-              <div class="content-page-content-date-class">09/09</div>
-            </div>
-          </ul>
+              </td>
+              <td>
+                <pre class="content-page-code-class"><code class="Java">
+public class Main{
+    public static void main(String[] args){
+        String str = "hello world";
+        for(int i = 0;i < 10;i++){
+            System.out.println(str + (i + 1));
+        }
+    }
+
+    public static void test(){
+        System.out.println("hello world");
+    }
+}
+                  </code></pre>
+              </td>
+            </table>
+          </div>
+          <!-- content end -->
         </div>
       </div>
     </div>
+    <div id="info-copy">复制成功</div>
+    <div id="info-save">保存成功</div>
     <div id="bottom-id">
+      <!-- bottom info start -->
       <p id="bottom-information-id">Powered by <a id="bottom-a-information-id" href="https://github.com/Ascmee">Acc</a></p>
+      <!-- bottom info end -->
     </div>
-
-    <!--script-->
+    <!-- script start -->
     <script src="../js/general.js"></script>
+    <script src="../js/page.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+    <!-- script end -->
   </body>
 </html>

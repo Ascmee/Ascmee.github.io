@@ -2,13 +2,6 @@ let articles = [0, 0, 0, 0, 0, 0, 0, 0, 0];
 var index = 0;
 var content_div_a = document.querySelectorAll(".content-div-a-class");
 Array.from(content_div_a).forEach(function (val) {
-  val.addEventListener("mouseenter", function () {
-    val.style.color = "#2a6df4";
-  });
-
-  val.addEventListener("mouseleave", function () {
-    val.style.color = "black";
-  });
   if (isMobile()) val.style.fontSize = 18 + articles[index] / 5 + "px";
   else val.style.fontSize = 30 + articles[index] / 2.5 + "px";
   val.innerHTML += "(" + articles[index++] + ")";
