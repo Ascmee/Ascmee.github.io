@@ -12,13 +12,26 @@
   color: #2a6df4;
 }
 
+.content-page-item-a-class:hover {
+  color: #2a6df4a0;
+}
+
+.content-page-item-origin-class {
+  font-weight: bold;
+  margin-left: 15px;
+  color: gray;
+  cursor: pointer;
+}
+
+.content-page-item-origin-class:hover {
+  color: #2a6df4;
+  transition: 0.5s;
+}
+
 .content-page-item-span-class {
   height: fit-content;
   margin-left: auto;
-}
-
-.content-page-item-a-class:hover {
-  color: #2a6df4a0;
+  padding-right: 50px;
 }
 
 #content-page-id {

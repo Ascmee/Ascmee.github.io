@@ -148,42 +148,42 @@ a {
   border-top-style: solid;
   border-top-color: gray;
 }
+
+#topbar-div-a-articles-id {
+  font-size: 18px;
+}
+
+#topbar-div-a-classify-id {
+  font-size: 18px;
+}
+
+#topbar-div-a-projects-id {
+  font-size: 18px;
+}
+
+#topbar-div-a-about-id {
+  font-size: 18px;
+}
+
 /* content */
 #content-id {
   font-family: "LXGW WenKai";
   width: max-content;
   min-width: 1000px;
   height: fit-content;
-  min-height: 780px;
+  min-height: 720px;
   position: relative;
   margin-left: 50%;
-  margin-top: 60px;
+  margin-top: 130px;
   transform: translate(-50%, 0);
   z-index: 50;
   overflow: hidden;
 }
 
-#content-p-id {
-  font-weight: bold;
-  font-size: 24px;
-  width: max-content;
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-#content-p-author-id {
-  font-family: "LXGW WenKai";
-  width: max-content;
-  position: absolute;
-  top: calc(40% + 3em);
-  left: 50%;
-  transform: translate(-50%, 0);
-}
 /* bottom */
 #bottom-id {
   font-family: "LXGW WenKai Mono";
+  font-size: 15px;
   width: fit-content;
   height: fit-content;
   position: relative;
@@ -196,4 +196,23 @@ a {
 
 #bottom-a-information-id {
   color: gray;
+}
+
+#upto-top {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  top: 85%;
+  right: 5%;
+  border-radius: 50%;
+  visibility: hidden;
+}
+
+#upto-top img {
+  width: 40px;
+  height: 40px;
+}
+
+#upto-top img:hover {
+  content: url("../image/top_over.png");
 }

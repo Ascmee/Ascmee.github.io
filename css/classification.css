@@ -27,64 +27,250 @@
   transform: translate(-50%, 0);
 }
 
-#content-div-java-id {
+#content-div-1-id {
+  position: absolute;
   width: fit-content;
+  transform: translate(-50%, 0);
+}
+
+#content-div-2-id {
+  position: absolute;
+  width: fit-content;
+  transform: translate(-50%, 0);
+}
+
+#content-div-3-id {
+  position: absolute;
+  width: fit-content;
+  transform: translate(-50%, 0);
+}
+
+#content-div-4-id {
+  position: absolute;
+  width: fit-content;
+  transform: translate(-50%, 0);
+}
+
+#content-div-5-id {
+  position: absolute;
+  width: fit-content;
+  transform: translate(-50%, 0);
+}
+
+#content-div-6-id {
+  position: absolute;
+  width: fit-content;
+  transform: translate(-50%, 0);
+}
+
+#content-div-7-id {
+  position: absolute;
+  width: fit-content;
+  transform: translate(-50%, 0);
+}
+
+#content-div-8-id {
+  position: absolute;
+  width: fit-content;
+  transform: translate(-50%, 0);
+}
+
+#content-div-9-id {
+  position: absolute;
+  width: fit-content;
+  transform: translate(-50%, 0);
+}
+/* 4个 */
+#content-id:has(#content-div-4-id):not(#content-div-5-id) #content-div-1-id {
+  margin-top: 100px;
+  margin-left: 25%;
+}
+
+#content-id:has(#content-div-4-id):not(#content-div-5-id) #content-div-2-id {
+  margin-top: 100px;
+  margin-left: 75%;
+}
+
+#content-id:has(#content-div-4-id):not(#content-div-5-id) #content-div-3-id {
+  margin-top: 400px;
+  margin-left: 25%;
+}
+
+#content-id:has(#content-div-4-id):not(#content-div-5-id) #content-div-4-id {
+  margin-top: 400px;
+  margin-left: 75%;
+}
+/* 5个 */
+#content-id:has(#content-div-5-id):not(#content-div-6-id) #content-div-1-id {
   margin-top: 50px;
+  margin-left: 30%;
+}
+
+#content-id:has(#content-div-5-id):not(#content-div-6-id) #content-div-2-id {
+  margin-top: 50px;
+  margin-left: 70%;
+}
+
+#content-id:has(#content-div-5-id):not(#content-div-6-id) #content-div-3-id {
+  margin-top: 450px;
+  margin-left: 30%;
+}
+
+#content-id:has(#content-div-5-id):not(#content-div-6-id) #content-div-4-id {
+  margin-top: 450px;
+  margin-left: 70%;
+}
+
+#content-id:has(#content-div-5-id):not(#content-div-6-id) #content-div-5-id {
+  margin-top: 240px;
   margin-left: 50%;
-  transform: translate(-50%, 0);
+}
+/* 6个 */
+#content-id:has(#content-div-6-id):not(#content-div-7-id) #content-div-1-id {
+  margin-top: 60px;
+  margin-left: 50%;
 }
 
-#content-div-cocpp-id {
-  width: fit-content;
-  margin-left: 32%;
-  transform: translate(-50%, 0);
+#content-id:has(#content-div-6-id):not(#content-div-7-id) #content-div-2-id {
+  margin-top: 170px;
+  margin-left: 23%;
 }
 
-#content-div-asm-id {
-  width: fit-content;
-  margin-top: 0px;
+#content-id:has(#content-div-6-id):not(#content-div-7-id) #content-div-3-id {
+  margin-top: 170px;
   margin-left: 78%;
-  transform: translate(-50%, 0);
 }
 
-#content-div-python-id {
-  width: fit-content;
-  margin-top: 0px;
-  margin-left: 57%;
-  transform: translate(-50%, 0);
+#content-id:has(#content-div-6-id):not(#content-div-7-id) #content-div-4-id {
+  margin-top: 340px;
+  margin-left: 23%;
 }
 
-#content-div-web-id {
-  width: fit-content;
-  margin-top: 0px;
-  margin-left: 43%;
-  transform: translate(-50%, 0);
+#content-id:has(#content-div-6-id):not(#content-div-7-id) #content-div-5-id {
+  margin-top: 340px;
+  margin-left: 78%;
 }
 
-#content-div-ds-id {
-  width: fit-content;
-  margin-top: 0px;
-  margin-left: 18%;
-  transform: translate(-50%, 0);
+#content-id:has(#content-div-6-id):not(#content-div-7-id) #content-div-6-id {
+  margin-top: 450px;
+  margin-left: 50%;
+}
+/* 7个 */
+#content-id:has(#content-div-7-id):not(#content-div-8-id) #content-div-1-id {
+  margin-top: 60px;
+  margin-left: 50%;
 }
 
-#content-div-cs-id {
-  width: fit-content;
-  margin-top: 0px;
-  margin-left: 61%;
-  transform: translate(-50%, 0);
+#content-id:has(#content-div-7-id):not(#content-div-8-id) #content-div-2-id {
+  margin-top: 170px;
+  margin-left: 23%;
 }
 
-#content-div-linux-id {
-  width: fit-content;
-  margin-top: 0px;
-  margin-left: 82%;
-  transform: translate(-50%, 0);
+#content-id:has(#content-div-7-id):not(#content-div-8-id) #content-div-3-id {
+  margin-top: 170px;
+  margin-left: 78%;
 }
 
-#content-div-other-id {
-  width: fit-content;
-  margin-top: 0px;
-  margin-left: 42%;
-  transform: translate(-50%, 0);
+#content-id:has(#content-div-7-id):not(#content-div-8-id) #content-div-4-id {
+  margin-top: 340px;
+  margin-left: 23%;
+}
+
+#content-id:has(#content-div-7-id):not(#content-div-8-id) #content-div-5-id {
+  margin-top: 340px;
+  margin-left: 78%;
+}
+
+#content-id:has(#content-div-7-id):not(#content-div-8-id) #content-div-6-id {
+  margin-top: 450px;
+  margin-left: 50%;
+}
+
+#content-id:has(#content-div-7-id):not(#content-div-8-id) #content-div-7-id {
+  margin-top: 255px;
+  margin-left: 50%;
+}
+/* 8个 */
+#content-id:has(#content-div-8-id):not(#content-div-9-id) #content-div-1-id {
+  margin-top: 50px;
+  margin-left: 40%;
+}
+
+#content-id:has(#content-div-8-id):not(#content-div-9-id) #content-div-2-id {
+  margin-top: 50px;
+  margin-left: 60%;
+}
+
+#content-id:has(#content-div-8-id):not(#content-div-9-id) #content-div-3-id {
+  margin-top: 180px;
+  margin-left: 25%;
+}
+
+#content-id:has(#content-div-8-id):not(#content-div-9-id) #content-div-4-id {
+  margin-top: 180px;
+  margin-left: 75%;
+}
+
+#content-id:has(#content-div-8-id):not(#content-div-9-id) #content-div-5-id {
+  margin-top: 310px;
+  margin-left: 25%;
+}
+
+#content-id:has(#content-div-8-id):not(#content-div-9-id) #content-div-6-id {
+  margin-top: 310px;
+  margin-left: 75%;
+}
+
+#content-id:has(#content-div-8-id):not(#content-div-9-id) #content-div-7-id {
+  margin-top: 440px;
+  margin-left: 40%;
+}
+
+#content-id:has(#content-div-8-id):not(#content-div-9-id) #content-div-8-id {
+  margin-top: 440px;
+  margin-left: 60%;
+}
+/* 9个 */
+#content-id:has(#content-div-9-id):not(#content-div-10-id) #content-div-1-id {
+  margin-top: 50px;
+  margin-left: 40%;
+}
+
+#content-id:has(#content-div-9-id):not(#content-div-10-id) #content-div-2-id {
+  margin-top: 50px;
+  margin-left: 60%;
+}
+
+#content-id:has(#content-div-9-id):not(#content-div-10-id) #content-div-3-id {
+  margin-top: 180px;
+  margin-left: 25%;
+}
+
+#content-id:has(#content-div-9-id):not(#content-div-10-id) #content-div-4-id {
+  margin-top: 180px;
+  margin-left: 75%;
+}
+
+#content-id:has(#content-div-9-id):not(#content-div-10-id) #content-div-5-id {
+  margin-top: 310px;
+  margin-left: 25%;
+}
+
+#content-id:has(#content-div-9-id):not(#content-div-10-id) #content-div-6-id {
+  margin-top: 310px;
+  margin-left: 75%;
+}
+
+#content-id:has(#content-div-9-id):not(#content-div-10-id) #content-div-7-id {
+  margin-top: 440px;
+  margin-left: 40%;
+}
+
+#content-id:has(#content-div-9-id):not(#content-div-10-id) #content-div-8-id {
+  margin-top: 440px;
+  margin-left: 60%;
+}
+#content-id:has(#content-div-9-id):not(#content-div-10-id) #content-div-9-id {
+  margin-top: 245px;
+  margin-left: 50%;
 }

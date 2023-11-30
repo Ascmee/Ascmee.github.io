@@ -3,8 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Acc的博客</title>
+    <title></title>
     <link href="css/general.css" rel="stylesheet" type="text/css" />
+    <link href="css/page.css" rel="stylesheet" type="text/css" />
+    <link href="css/index.css" rel="stylesheet" type="text/css" />
   </head>
   <body onresize="browser_resize();" onload="body_init();">
     <!--Top bar-->
@@ -98,14 +100,25 @@
     <!--topbar more show-->
     <div id="topbar-div-outer-show-id"></div>
     <!--content-->
-    <div id="content-id">
-      <p id="content-p-id">非彼无我，非我无所取</p>
-      <p id="content-p-author-id">《庄子·齐物论》</p>
-    </div>
+    <article id="content-id">
+      <div id="content-center-align-id">
+        <p>
+          <center>
+            <font size="5px">
+              <strong> 非彼无我，非我无所取 </strong>
+            </font>
+          </center>
+        </p>
+        <center>
+          <p>《庄子·齐物论》</p>
+        </center>
+      </div>
+    </article>
     <div id="bottom-id">
       <p id="bottom-information-id">Powered by <a id="bottom-a-information-id" href="https://github.com/Ascmee">Acc</a></p>
     </div>
     <!--script-->
+    <script src="js/info.js"></script>
     <script src="js/general.js"></script>
     <script src="js/index.js"></script>
   </body>

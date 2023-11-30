@@ -5,6 +5,7 @@
 
 #content-page-id {
   width: 1000px;
+  min-height: 605px;
   margin-left: 50%;
   margin-top: 60px;
   padding-bottom: 60px;
@@ -16,6 +17,7 @@
   font-weight: bold;
   width: fit-content;
   margin-left: 50%;
+  padding-bottom: 2px;
   transform: translate(-50%, 0);
 }
 
@@ -24,11 +26,14 @@
 }
 
 #content-time-id {
-  font-size: 16px;
-  font-weight: lighter;
   width: fit-content;
   margin-left: 50%;
   transform: translate(-50%, 0);
+}
+
+#content-time-id > p {
+  font-size: 16px;
+  font-weight: lighter;
 }
 
 #content-content-id {
@@ -36,4 +41,124 @@
   width: 800px;
   margin-left: 50%;
   transform: translate(-50%, 0);
+}
+
+:root {
+  --background-color: #282c34;
+}
+
+body {
+  font-size: 22px;
+}
+
+code {
+  font-size: 18px;
+}
+
+p {
+  font-size: 22px;
+}
+
+a {
+  font-size: 22px;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 34px;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+h4 {
+  font-size: 25px;
+}
+
+h5 {
+  font-size: 22px;
+}
+
+h6 {
+  font-size: 22px;
+}
+
+h1 > a {
+  font-size: 40px;
+}
+
+h2 > a {
+  font-size: 34px;
+}
+
+h3 > a {
+  font-size: 28px;
+}
+
+h4 > a {
+  font-size: 25px;
+}
+
+h5 > a {
+  font-size: 22px;
+}
+
+h6 > a {
+  font-size: 22px;
+}
+
+mark {
+  font-size: 22px;
+}
+
+ul {
+  font-size: 22px;
+}
+
+ol {
+  font-size: 22px;
+}
+
+blockquote {
+  font-size: 22px;
+}
+
+.content-inline-code-class {
+  font-size: 22px;
+}
+
+.content-table-class > table th {
+  font-size: 22px;
+}
+
+.content-table-class > table td {
+  font-size: 22px;
+}
+
+.toc > li > a {
+  font-size: 22px;
+}
+
+#content-page-content-id {
+  font-size: 22px;
+}
+
+#content-page-content-id strong {
+  font-size: 22px;
+}
+
+#content-page-content-id em {
+  font-size: 22px;
+}
+
+#content-page-content-id del {
+  font-size: 22px;
+}
+
+#content-page-content-id u {
+  font-size: 22px;
 }

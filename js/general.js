@@ -13,6 +13,12 @@ const topbar_div_outer_show = document.getElementById("topbar-div-outer-show-id"
 const bottom_a_information = document.getElementById("bottom-a-information-id");
 const head_element = document.querySelector("head");
 // width
+document.getElementById("topbar-div-a-blogger-id").textContent = author + "的博客";
+if (document.title.trim() == "") {
+  document.title = author + "的博客";
+} else {
+  document.title = document.title + " | " + author + "的博客";
+}
 var screen_width = screen.width;
 var time_over_hundred = true;
 
@@ -29,6 +35,21 @@ function body_init() {
     topbar_div_more.style.visibility = "visible";
     topbar_div.style.right = "100%";
     topbar_div.style.visibility = "hidden";
+  }
+
+  var totop = document.querySelector("#upto-top");
+
+  if (totop != null) {
+    window.onscroll = () => {
+      if (document.documentElement.scrollTop >= 145) {
+        totop.style.visibility = "visible";
+      } else totop.style.visibility = "hidden";
+    };
+    if (document.scrollTop >= 145) totop.style.visibility = "visible";
+    totop.addEventListener("click", function () {
+      document.body.scrollTop = document.documentElement.scrollTop = 0;
+      totop.style.visibility = "hidden";
+    });
   }
 }
 
@@ -139,3 +160,13 @@ bottom_a_information.addEventListener("mouseenter", function () {
 bottom_a_information.addEventListener("mouseleave", function () {
   this.style.color = "gray";
 });
+
+function getQueryVariable(val) {
+  var query = window.location.search.substring(1);
+  var vars = query.split("&");
+  for (var i = 0; i < vars.length; i++) {
+    var pair = vars[i].split("=");
+    if (pair[0] == val) return pair[1];
+  }
+  return "all";
+}
