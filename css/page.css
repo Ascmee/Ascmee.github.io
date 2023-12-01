@@ -539,3 +539,284 @@ blockquote {
 #bottom-a-information-id {
   font-size: 15px;
 }
+
+/* ipad pro */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  #content-id {
+    min-width: 700px;
+    max-width: 700px;
+  }
+
+  #content-page-id {
+    width: 700px;
+    min-height: 720px;
+    height: fit-content;
+    margin-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  pre code.hljs:not(.content-code-number) {
+    width: 615px;
+  }
+}
+
+/* iphoneX */
+@media screen and (max-width: 768px) {
+  #content-id {
+    min-width: 98%;
+    max-width: 98%;
+  }
+
+  #content-page-id {
+    width: 98%;
+    min-height: 720px;
+    height: fit-content;
+    margin-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  #bottom-information-id {
+    font-size: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  #content-page-content-id {
+    font-size: 12px;
+  }
+
+  pre code.hljs:not(.content-code-number) {
+    width: calc(98vw - 60px);
+  }
+
+  pre code.hljs[class~="content-code-number"] {
+    visibility: visible;
+  }
+
+  body {
+    font-size: 12px;
+  }
+
+  input {
+    width: 8px;
+    height: 8px;
+  }
+
+  code {
+    font-family: "LXGW WenKai Mono";
+    font-weight: bold;
+    font-size: 12px;
+    padding-left: 0em;
+  }
+
+  p {
+    font-size: 12px;
+    margin: 0;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    word-wrap: break-word;
+  }
+
+  p:has(img[src]) {
+    display: flex;
+    align-items: center;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  hr {
+    background-color: #e7e7e7;
+    border: none;
+    height: 2px;
+  }
+
+  a {
+    font-size: 12px;
+  }
+
+  h1 {
+    font-size: 25px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+
+  h2 {
+    font-size: 20px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+
+  h3 {
+    font-size: 16px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+
+  h4 {
+    font-size: 14px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+
+  h5 {
+    font-size: 12px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+
+  h6 {
+    font-size: 12px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+
+  h1 > a:target {
+    padding-top: 40px;
+  }
+
+  h2 > a:target {
+    padding-top: 40px;
+  }
+
+  h3 > a:target {
+    padding-top: 40px;
+  }
+
+  h4 > a:target {
+    padding-top: 40px;
+  }
+
+  h5 > a:target {
+    padding-top: 40px;
+  }
+
+  h6 > a:target {
+    padding-top: 40px;
+  }
+
+  h1 > a {
+    font-size: 25px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+
+  h2 > a {
+    font-size: 20px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+
+  h3 > a {
+    font-size: 16px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+
+  h4 > a {
+    font-size: 14px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+
+  h5 > a {
+    font-size: 12px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+
+  h6 > a {
+    font-size: 12px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  mark {
+    font-size: 12px;
+  }
+
+  ul {
+    font-size: 12px;
+  }
+
+  ol {
+    font-size: 12px;
+  }
+
+  blockquote {
+    font-size: 12px;
+  }
+
+  .content-page-code-class {
+    width: 100%;
+  }
+
+  .content-inline-code-class {
+    font-size: 12px;
+  }
+
+  .content-table-class > table th {
+    font-size: 12px;
+    height: 25px;
+  }
+
+  .content-table-class > table td {
+    font-size: 12px;
+    height: 25px;
+  }
+
+  .toc > li > a {
+    font-weight: bold;
+    font-size: 12px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .toc > li {
+    height: fit-content;
+  }
+
+  #content-page-id {
+    margin-top: 0;
+  }
+
+  #content-page-title-id {
+    font-size: 25px;
+  }
+
+  #content-page-date-id {
+    font-size: 10px;
+  }
+
+  #content-page-content-id strong {
+    font-size: 12px;
+  }
+
+  #content-page-content-id em {
+    font-size: 12px;
+  }
+
+  #content-page-content-id del {
+    font-size: 12px;
+  }
+
+  #content-page-content-id u {
+    font-size: 12px;
+  }
+
+  #bottom-information-id {
+    font-size: 10px;
+  }
+
+  #bottom-a-information-id {
+    font-size: 10px;
+  }
+
+  pre code.hljs:not(content-code-number)::-webkit-scrollbar {
+    height: 0px;
+  }
+
+  pre {
+    width: 25px;
+  }
+}

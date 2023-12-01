@@ -31,7 +31,3 @@ for (var i = 0; i < project_name_arr.length; i++) {
   now_element.lastElementChild.textContent =
     project_name_arr[i].date.split("/")[0] + "/" + project_name_arr[i].date.split("/")[1] + "/" + project_name_arr[i].date.split("/")[2];
 }
-
-if (isMobile()) {
-  document.querySelector("#content-id").style.height = "530px";
-}

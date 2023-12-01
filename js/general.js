@@ -10,7 +10,6 @@ const topbar_div_a_classification = document.getElementById("topbar-div-a-classi
 const topbar_div_a_projects = document.getElementById("topbar-div-a-projects-id");
 const topbar_div_a_about = document.getElementById("topbar-div-a-about-id");
 const topbar_div_outer_show = document.getElementById("topbar-div-outer-show-id");
-const bottom_a_information = document.getElementById("bottom-a-information-id");
 const head_element = document.querySelector("head");
 // width
 document.getElementById("topbar-div-a-blogger-id").textContent = author + "的博客";
@@ -26,10 +25,21 @@ function body_init() {
   if (isMobile()) {
   }
   var window_width = window.outerWidth;
-  if (window_width / screen_width >= 0.5 && !isMobile()) {
-    topbar_div_blogger.style.left = (window_width / screen_width - 0.5) * 50 + 2 + "%";
+  if (window_width / screen_width >= 0.5) {
+    if (screen_width <= 768) {
+      topbar_div_blogger.style.left = "5px";
+    } else if (screen_width <= 1024) {
+      topbar_div_blogger.style.left = "27%";
+    }
     topbar_div.style.visibility = "visible";
     topbar_div_more.style.visibility = "hidden";
+    if (screen_width > 768) {
+      topbar_div.style.visibility = "visible";
+      topbar_div_more.style.visibility = "hidden";
+    } else {
+      topbar_div_more.style.visibility = "visible";
+      topbar_div.style.visibility = "hidden";
+    }
   } else {
     topbar_div_blogger.style.left = "2%";
     topbar_div_more.style.visibility = "visible";
@@ -38,6 +48,17 @@ function body_init() {
   }
 
   var totop = document.querySelector("#upto-top");
+
+  var body_item = document.querySelector("body");
+  body_item.appendChild(document.createElement("div"));
+  body_item.lastElementChild.id = "bottom-id";
+  body_item.lastElementChild.appendChild(document.createElement("p"));
+  body_item.lastElementChild.lastElementChild.id = "bottom-information-id";
+  body_item.lastElementChild.lastElementChild.textContent = "Powered by ";
+  body_item.lastElementChild.lastElementChild.appendChild(document.createElement("a"));
+  body_item.lastElementChild.lastElementChild.lastElementChild.id = "bottom-a-information-id";
+  body_item.lastElementChild.lastElementChild.lastElementChild.href = home_url;
+  body_item.lastElementChild.lastElementChild.lastElementChild.textContent = author;
 
   if (totop != null) {
     window.onscroll = () => {
@@ -53,17 +74,32 @@ function body_init() {
   }
 }
 
-function browser_resize() {
+window.addEventListener("resize", function () {
   var window_width = window.outerWidth;
   if (!time_over_hundred) return;
   time_over_hundred = false;
-  if (window_width / screen_width >= 0.5 && screen_width >= 500) {
-    topbar_div_blogger.style.left = (window_width / screen_width - 0.5) * 50 + 2 + "%";
-    topbar_div.style.visibility = "visible";
-    topbar_div_more.style.visibility = "hidden";
-    topbar_div.style.right = "40%";
-    topbar_div.style.top = "0px";
-    topbar_div_outer_show.style.visibility = "hidden";
+  if (window_width / screen_width >= 0.5) {
+    if (screen_width > 1024) {
+      topbar_div_blogger.style.left = (window_width / screen_width - 0.5) * 50 + 2 + "%";
+    } else if (screen_width <= 768) {
+      topbar_div_blogger.style.left = "5px";
+    } else if (screen_width <= 1024) {
+      topbar_div_blogger.style.left = "27%";
+    }
+
+    if (screen_width > 768) {
+      topbar_div.style.visibility = "visible";
+      topbar_div_more.style.visibility = "hidden";
+      topbar_div.style.right = "40%";
+      topbar_div.style.top = "0px";
+      topbar_div_outer_show.style.visibility = "hidden";
+    } else {
+      topbar_div_more.style.visibility = "visible";
+      if (topbar_div_outer_show.style.visibility != "visible") {
+        topbar_div.style.visibility = "hidden";
+        topbar_div.style.right = "100%";
+      }
+    }
   } else {
     topbar_div_blogger.style.left = "2%";
     topbar_div_more.style.visibility = "visible";
@@ -73,7 +109,7 @@ function browser_resize() {
     }
   }
   setTimeout(set_time_over_hundred, 100);
-}
+});
 
 function set_time_over_hundred() {
   time_over_hundred = true;
@@ -144,6 +180,8 @@ function isMobile() {
   } else return false;
 }
 
+document.addEventListener("click", function (e) {});
+
 window.addEventListener("mousedown", function (e) {
   if (topbar_div_outer_show.style.visibility == "visible" && e.clientY > 100) {
     topbar_div.style.visibility = "hidden";
@@ -151,14 +189,6 @@ window.addEventListener("mousedown", function (e) {
     topbar_div.style.top = "0px";
     topbar_div_outer_show.style.visibility = "hidden";
   }
-});
-
-bottom_a_information.addEventListener("mouseenter", function () {
-  this.style.color = "#2a6df4";
-});
-
-bottom_a_information.addEventListener("mouseleave", function () {
-  this.style.color = "gray";
 });
 
 function getQueryVariable(val) {

@@ -61,6 +61,8 @@ if (search_item != null) {
   });
 }
 
+document.addEventListener("click", function (e) {});
+
 window.onkeyup = function (e) {
   if (document.querySelector("#search-input-id") == document.activeElement && e.key == "Enter") {
     goto_search_url();
@@ -81,9 +83,6 @@ Array.from(content_page_box).forEach(function (val) {
   });
 });
 
-if (isMobile()) {
-  document.querySelector("#content-id").style.height = "530px";
-}
 function findStr(str, regex) {
   str = str.toLocaleLowerCase();
   regex = regex.toLocaleLowerCase();

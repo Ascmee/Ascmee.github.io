@@ -5,7 +5,7 @@
 
 #content-page-id {
   width: 1000px;
-  min-height: 605px;
+  min-height: 600px;
   margin-left: 50%;
   margin-top: 60px;
   padding-bottom: 60px;
@@ -17,7 +17,6 @@
   font-weight: bold;
   width: fit-content;
   margin-left: 50%;
-  padding-bottom: 2px;
   transform: translate(-50%, 0);
 }
 
@@ -41,6 +40,11 @@
   width: 800px;
   margin-left: 50%;
   transform: translate(-50%, 0);
+}
+
+#bottom-information-id {
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 :root {
@@ -161,4 +165,282 @@ blockquote {
 
 #content-page-content-id u {
   font-size: 22px;
+}
+
+/* ipad pro */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  #content-page-id {
+    width: 700px;
+  }
+
+  #content-content-id {
+    font-size: 18px;
+    width: 660px;
+    margin-left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  body {
+    font-size: 18px;
+  }
+
+  code {
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  a {
+    font-size: 18px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  h3 {
+    font-size: 25px;
+  }
+
+  h4 {
+    font-size: 20px;
+  }
+
+  h5 {
+    font-size: 18px;
+  }
+
+  h6 {
+    font-size: 18px;
+  }
+
+  h1 > a {
+    font-size: 40px;
+  }
+
+  h2 > a {
+    font-size: 32px;
+  }
+
+  h3 > a {
+    font-size: 25px;
+  }
+
+  h4 > a {
+    font-size: 20px;
+  }
+
+  h5 > a {
+    font-size: 18px;
+  }
+
+  h6 > a {
+    font-size: 18px;
+  }
+
+  mark {
+    font-size: 18px;
+  }
+
+  ul {
+    font-size: 18px;
+  }
+
+  ol {
+    font-size: 18px;
+  }
+
+  blockquote {
+    font-size: 18px;
+  }
+
+  .content-inline-code-class {
+    font-size: 18px;
+  }
+
+  .content-table-class > table th {
+    font-size: 18px;
+  }
+
+  .content-table-class > table td {
+    font-size: 18px;
+  }
+
+  .toc > li > a {
+    font-size: 18px;
+  }
+
+  #content-page-content-id {
+    font-size: 18px;
+  }
+
+  #content-page-content-id strong {
+    font-size: 18px;
+  }
+
+  #content-page-content-id em {
+    font-size: 18px;
+  }
+
+  #content-page-content-id del {
+    font-size: 18px;
+  }
+
+  #content-page-content-id u {
+    font-size: 18px;
+  }
+}
+
+/* iphoneX */
+@media screen and (max-width: 768px) {
+  #content-page-id {
+    width: 96%;
+    min-height: 0;
+    height: fit-content;
+    margin-top: 0;
+    padding-bottom: 0;
+  }
+
+  #content-page-title-id {
+    font-size: 25px;
+    margin-top: 0;
+  }
+
+  #content-time-id > p {
+    font-size: 10px;
+  }
+
+  #content-content-id {
+    font-size: 15px;
+    width: 100%;
+    margin-left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  body {
+    font-size: 12px;
+  }
+
+  code {
+    font-size: 12px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+
+  a {
+    font-size: 12px;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  h4 {
+    font-size: 15px;
+  }
+
+  h5 {
+    font-size: 12px;
+  }
+
+  h6 {
+    font-size: 12px;
+  }
+
+  h1 > a {
+    font-size: 25px;
+  }
+
+  h2 > a {
+    font-size: 22px;
+  }
+
+  h3 > a {
+    font-size: 18px;
+  }
+
+  h4 > a {
+    font-size: 15px;
+  }
+
+  h5 > a {
+    font-size: 12px;
+  }
+
+  h6 > a {
+    font-size: 12px;
+  }
+
+  mark {
+    font-size: 12px;
+  }
+
+  ul {
+    font-size: 12px;
+  }
+
+  ol {
+    font-size: 12px;
+  }
+
+  blockquote {
+    font-size: 12px;
+  }
+
+  .content-inline-code-class {
+    font-size: 12px;
+  }
+
+  .content-table-class > table th {
+    font-size: 12px;
+  }
+
+  .content-table-class > table td {
+    font-size: 12px;
+  }
+
+  .toc > li > a {
+    font-size: 12px;
+  }
+
+  #content-page-content-id {
+    font-size: 12px;
+  }
+
+  #content-page-content-id strong {
+    font-size: 12px;
+  }
+
+  #content-page-content-id em {
+    font-size: 12px;
+  }
+
+  #content-page-content-id del {
+    font-size: 12px;
+  }
+
+  #content-page-content-id u {
+    font-size: 12px;
+  }
+
+  #bottom-information-id {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
 }

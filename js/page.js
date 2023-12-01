@@ -10,6 +10,7 @@ Array.from(document.querySelectorAll(".content-code-number")).forEach(function (
 Array.from(document.querySelectorAll(".content-page-code-button-copy-class")).forEach(function (val) {
   val.addEventListener("mouseup", function () {
     var text = val.parentElement.parentElement.lastElementChild.lastElementChild.lastElementChild.lastElementChild.textContent.trim();
+
     if (navigator.clipboard) {
       // clipboard api 复制
       navigator.clipboard.writeText(text);
@@ -17,7 +18,9 @@ Array.from(document.querySelectorAll(".content-page-code-button-copy-class")).fo
       var textarea = document.createElement("textarea");
       document.body.appendChild(textarea);
       // 隐藏此输入框
-      textarea.style.visibility = "hidden";
+      textarea.style.position = "fixed";
+      textarea.style.clip = "rect(0 0 0 0)";
+      textarea.style.top = "10px";
       // 赋值
       textarea.value = text;
       // 选中
@@ -27,6 +30,24 @@ Array.from(document.querySelectorAll(".content-page-code-button-copy-class")).fo
       // 移除输入框
       document.body.removeChild(textarea);
     }
+
+    // if (navigator.clipboard) {
+    //   // clipboard api 复制
+    //   navigator.clipboard.writeText(text);
+    // } else {
+    //   var textarea = document.createElement("textarea");
+    //   document.body.appendChild(textarea);
+    //   // 隐藏此输入框
+    //   textarea.style.visibility = "hidden";
+    //   // 赋值
+    //   textarea.value = text;
+    //   // 选中
+    //   textarea.select();
+    //   // 复制
+    //   document.execCommand("copy", true);
+    //   // 移除输入框
+    //   document.body.removeChild(textarea);
+    // }
     copy_item.style.visibility = "visible";
     setTimeout(function () {
       copy_item.style.visibility = "hidden";
@@ -47,14 +68,34 @@ Array.from(document.querySelectorAll(".content-page-code-button-toimage-class"))
 Array.from(document.querySelectorAll(".content-page-code-button-number-class")).forEach(function (val) {
   var numberLine =
     val.parentElement.parentElement.lastElementChild.firstElementChild.firstElementChild.firstElementChild.lastElementChild.lastElementChild;
-  var codeLine = numberLine.parentElement.parentElement.parentElement.lastElementChild.lastElementChild;
   val.addEventListener("mouseup", function () {
-    if (codeLine.style.width == "985px") {
-      numberLine.style.marginLeft = "0px";
-      codeLine.style.width = "945px";
+    if (screen.width >= 1024) {
+      var codeLine = numberLine.parentElement.parentElement.parentElement.lastElementChild.lastElementChild;
+      if (codeLine.style.width == "985px") {
+        numberLine.style.marginLeft = "0px";
+        codeLine.style.width = "945px";
+      } else {
+        numberLine.style.marginLeft = "-40px";
+        codeLine.style.width = "985px";
+      }
+    } else if (screen.width >= 768) {
+      var codeLine = numberLine.parentElement.parentElement.parentElement.lastElementChild.lastElementChild.lastElementChild;
+      if (codeLine.style.width == "655px") {
+        numberLine.style.marginLeft = "0px";
+        codeLine.style.width = "615px";
+      } else {
+        numberLine.style.marginLeft = "-40px";
+        codeLine.style.width = "655px";
+      }
     } else {
-      numberLine.style.marginLeft = "-40px";
-      codeLine.style.width = "985px";
+      var codeLine = numberLine.parentElement.parentElement.parentElement.lastElementChild.lastElementChild.lastElementChild;
+      if (codeLine.style.width == "calc(98vw - 35px)") {
+        numberLine.style.marginLeft = "0px";
+        codeLine.style.width = "calc(98vw - 60px)";
+      } else {
+        numberLine.style.marginLeft = "-25px";
+        codeLine.style.width = "calc(98vw - 35px)";
+      }
     }
   });
 });
@@ -62,7 +103,8 @@ Array.from(document.querySelectorAll(".content-page-code-button-number-class")).
 Array.from(document.querySelectorAll(".content-page-code-class")).forEach(function (val) {
   if (val.clientWidth < val.scrollWidth) {
     var numberLine = val.parentElement.parentElement.parentElement.firstElementChild.firstElementChild.firstElementChild.firstElementChild;
-    numberLine.style.marginTop = "-10px";
+    if (screen.width < 1024 && screen.width >= 768) numberLine.style.marginTop = "0px";
+    else if (screen.width >= 1024) numberLine.style.marginTop = "-10px";
   }
 });
 
@@ -83,7 +125,4 @@ function downloadImage(source) {
     tag.href = canvas.toDataURL(1);
     tag.click();
   });
-}
-
-if (isMobile()) {
 }

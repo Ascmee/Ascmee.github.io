@@ -6,4 +6,4 @@ var name_arr = [
   { date: "2023/01/09/09:31:34", title: "Template", classification: "Other" },
 ];
 
-var classification_arr = ["Java", "C/C++", "Asm", "Python", "Web", "Data Struct", "C#", "Linux", "Other"];
+var classification_arr = ["Java", "C/C++", "Asm", "Python", "Web", "Data", "C#", "Linux", "Other"];
