@@ -292,11 +292,15 @@
   }
 
   #content-page-title-id > p {
-    font-size: 25px;
+    font-size: 40px;
   }
 
   #content-page-info-id {
     font-size: 10px;
+  }
+
+  #bottom-information-id {
+    font-size: 15px;
   }
 
   /* 9个 */

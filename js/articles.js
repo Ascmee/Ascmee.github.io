@@ -1,7 +1,11 @@
 var classification = getQueryVariable("classification");
+classification = decodeURI(classification);
 var kw = getQueryVariable("kw");
 kw = kw == "all" ? "" : kw;
+kw = decodeURI(kw);
 var num_item = 0;
+
+console.log(classification);
 
 name_arr.sort(function (val1, val2) {
   var result = val2.date.split("/")[0] - val1.date.split("/")[0];

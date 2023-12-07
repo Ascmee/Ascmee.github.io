@@ -183,11 +183,20 @@ function isMobile() {
 document.addEventListener("click", function (e) {});
 
 window.addEventListener("mousedown", function (e) {
-  if (topbar_div_outer_show.style.visibility == "visible" && e.clientY > 100) {
-    topbar_div.style.visibility = "hidden";
-    topbar_div.style.right = "40%";
-    topbar_div.style.top = "0px";
-    topbar_div_outer_show.style.visibility = "hidden";
+  if (screen_width >= 768) {
+    if (topbar_div_outer_show.style.visibility == "visible" && e.clientY > 100) {
+      topbar_div.style.visibility = "hidden";
+      topbar_div.style.right = "40%";
+      topbar_div.style.top = "0px";
+      topbar_div_outer_show.style.visibility = "hidden";
+    }
+  } else {
+    if (topbar_div_outer_show.style.visibility == "visible" && e.clientY > 70) {
+      topbar_div.style.visibility = "hidden";
+      topbar_div.style.right = "40%";
+      topbar_div.style.top = "0px";
+      topbar_div_outer_show.style.visibility = "hidden";
+    }
   }
 });
 

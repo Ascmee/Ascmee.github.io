@@ -436,9 +436,12 @@ blockquote {
 }
 
 .toc {
-  border-style: solid;
+  margin-right: 15px;
   padding-top: 20px;
   padding-bottom: 20px;
+  border-style: solid;
+  border-radius: 25px;
+  box-shadow: 10px 10px 5px #888888;
 }
 
 .toc {
@@ -463,27 +466,27 @@ blockquote {
 }
 
 .first {
-  margin-left: -1em;
+  margin-left: 0em;
 }
 
 .second {
-  margin-left: 0;
-}
-
-.third {
-  margin-left: 1em;
-}
-
-.fourth {
   margin-left: 2em;
 }
 
+.third {
+  margin-left: 4em;
+}
+
+.fourth {
+  margin-left: 6em;
+}
+
 .fifth {
-  margin-left: 3em;
+  margin-left: 8em;
 }
 
 .sixth {
-  margin-left: 4em;
+  margin-left: 10em;
 }
 
 #content-page-id {
@@ -511,7 +514,7 @@ blockquote {
 }
 
 #content-page-content-id {
-  font-size: 21px;
+  font-size: 18px;
   min-height: 550px;
   height: fit-content;
 }
@@ -563,12 +566,14 @@ blockquote {
 /* iphoneX */
 @media screen and (max-width: 768px) {
   #content-id {
-    min-width: 98%;
-    max-width: 98%;
+    min-width: 96%;
+    max-width: 96%;
+    display: flex;
+    justify-content: center;
   }
 
   #content-page-id {
-    width: 98%;
+    width: 96%;
     min-height: 720px;
     height: fit-content;
     margin-top: 60px;
@@ -576,41 +581,40 @@ blockquote {
   }
 
   #bottom-information-id {
-    font-size: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
   }
 
-  #content-page-content-id {
-    font-size: 12px;
-  }
-
   pre code.hljs:not(.content-code-number) {
-    width: calc(98vw - 60px);
+    width: calc(96vw - 72px);
+    padding-top: 0;
+    padding-bottom: 5px;
   }
 
   pre code.hljs[class~="content-code-number"] {
     visibility: visible;
-  }
-
-  body {
-    font-size: 12px;
+    padding-top: 0;
+    padding-bottom: 5px;
   }
 
   input {
-    width: 8px;
-    height: 8px;
+    width: 12px;
+    height: 12px;
   }
 
   code {
     font-family: "LXGW WenKai Mono";
     font-weight: bold;
-    font-size: 12px;
+    font-size: 14px;
     padding-left: 0em;
   }
 
+  strong {
+    font-family: "LXGW WenKai";
+    font-weight: bolder;
+  }
+
   p {
-    font-size: 12px;
     margin: 0;
     margin-top: 2px;
     margin-bottom: 2px;
@@ -632,42 +636,32 @@ blockquote {
     height: 2px;
   }
 
-  a {
-    font-size: 12px;
-  }
-
   h1 {
-    font-size: 25px;
     margin-top: 2px;
     margin-bottom: 2px;
   }
 
   h2 {
-    font-size: 20px;
     margin-top: 2px;
     margin-bottom: 2px;
   }
 
   h3 {
-    font-size: 16px;
     margin-top: 2px;
     margin-bottom: 2px;
   }
 
   h4 {
-    font-size: 14px;
     margin-top: 2px;
     margin-bottom: 2px;
   }
 
   h5 {
-    font-size: 12px;
     margin-top: 2px;
     margin-bottom: 2px;
   }
 
   h6 {
-    font-size: 12px;
     margin-top: 2px;
     margin-bottom: 2px;
   }
@@ -697,78 +691,49 @@ blockquote {
   }
 
   h1 > a {
-    font-size: 25px;
     margin-top: 2px;
     margin-bottom: 2px;
   }
 
   h2 > a {
-    font-size: 20px;
     margin-top: 2px;
     margin-bottom: 2px;
   }
 
   h3 > a {
-    font-size: 16px;
     margin-top: 2px;
     margin-bottom: 2px;
   }
 
   h4 > a {
-    font-size: 14px;
     margin-top: 2px;
     margin-bottom: 2px;
   }
 
   h5 > a {
-    font-size: 12px;
     margin-top: 2px;
     margin-bottom: 2px;
   }
 
   h6 > a {
-    font-size: 12px;
     margin-top: 5px;
     margin-bottom: 5px;
-  }
-
-  mark {
-    font-size: 12px;
-  }
-
-  ul {
-    font-size: 12px;
-  }
-
-  ol {
-    font-size: 12px;
-  }
-
-  blockquote {
-    font-size: 12px;
   }
 
   .content-page-code-class {
     width: 100%;
   }
 
-  .content-inline-code-class {
-    font-size: 12px;
-  }
-
   .content-table-class > table th {
-    font-size: 12px;
     height: 25px;
   }
 
   .content-table-class > table td {
-    font-size: 12px;
     height: 25px;
   }
 
   .toc > li > a {
     font-weight: bold;
-    font-size: 12px;
     margin-top: 5px;
     margin-bottom: 5px;
   }
@@ -776,40 +741,12 @@ blockquote {
     height: fit-content;
   }
 
+  #content-page-date-id {
+    font-size: 12px;
+  }
+
   #content-page-id {
     margin-top: 0;
-  }
-
-  #content-page-title-id {
-    font-size: 25px;
-  }
-
-  #content-page-date-id {
-    font-size: 10px;
-  }
-
-  #content-page-content-id strong {
-    font-size: 12px;
-  }
-
-  #content-page-content-id em {
-    font-size: 12px;
-  }
-
-  #content-page-content-id del {
-    font-size: 12px;
-  }
-
-  #content-page-content-id u {
-    font-size: 12px;
-  }
-
-  #bottom-information-id {
-    font-size: 10px;
-  }
-
-  #bottom-a-information-id {
-    font-size: 10px;
   }
 
   pre code.hljs:not(content-code-number)::-webkit-scrollbar {
@@ -818,5 +755,129 @@ blockquote {
 
   pre {
     width: 25px;
+  }
+
+  body {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  a {
+    font-size: 18px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  h3 {
+    font-size: 25px;
+  }
+
+  h4 {
+    font-size: 20px;
+  }
+
+  h5 {
+    font-size: 18px;
+  }
+
+  h6 {
+    font-size: 18px;
+  }
+
+  h1 > a {
+    font-size: 40px;
+  }
+
+  h2 > a {
+    font-size: 32px;
+  }
+
+  h3 > a {
+    font-size: 25px;
+  }
+
+  h4 > a {
+    font-size: 20px;
+  }
+
+  h5 > a {
+    font-size: 18px;
+  }
+
+  h6 > a {
+    font-size: 18px;
+  }
+
+  mark {
+    font-size: 18px;
+  }
+
+  ul {
+    font-size: 18px;
+  }
+
+  ol {
+    font-size: 18px;
+  }
+
+  blockquote {
+    font-size: 18px;
+  }
+
+  .content-inline-code-class {
+    font-size: 18px;
+  }
+
+  .content-table-class > table th {
+    font-size: 18px;
+  }
+
+  .content-table-class > table td {
+    font-size: 18px;
+  }
+
+  .toc > li > a {
+    font-size: 18px;
+  }
+
+  #content-page-title-id {
+    font-size: 40px;
+  }
+
+  #content-page-content-id {
+    font-size: 21px;
+  }
+
+  #content-page-content-id strong {
+    font-size: 18px;
+  }
+
+  #content-page-content-id em {
+    font-size: 18px;
+  }
+
+  #content-page-content-id del {
+    font-size: 18px;
+  }
+
+  #content-page-content-id u {
+    font-size: 18px;
+  }
+
+  #bottom-information-id {
+    font-size: 15px;
+  }
+
+  #bottom-a-information-id {
+    font-size: 15px;
   }
 }

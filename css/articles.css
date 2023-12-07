@@ -321,7 +321,7 @@ a {
   }
 
   #content-page-title-id {
-    font-size: 25px;
+    font-size: 40px;
   }
 
   li {
@@ -357,5 +357,9 @@ a {
 
   #content-page-info-id {
     font-size: 10px;
+  }
+
+  #bottom-information-id {
+    font-size: 15px;
   }
 }

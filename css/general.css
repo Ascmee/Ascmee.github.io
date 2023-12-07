@@ -1,37 +1,25 @@
 /* font */
 @font-face {
-  font-family: "LXGW WenKai Mono";
-  src: url("fonts/LXGWWenKaiMono-Light.ttf");
-  font-weight: lighter;
-}
-
-@font-face {
-  font-family: "LXGW WenKai Mono";
-  src: url("fonts/LXGWWenKaiMono-Regular.ttf");
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "LXGW WenKai Mono";
-  src: url("fonts/LXGWWenKaiMono-Bold.ttf");
-  font-weight: bold;
-}
-
-@font-face {
   font-family: "LXGW WenKai";
-  src: url("fonts/LXGWWenKai-Light.ttf");
-  font-weight: lighter;
-}
-
-@font-face {
-  font-family: "LXGW WenKai";
-  src: url("fonts/LXGWWenKai-Regular.ttf");
+  src: url("font/LXGWWenKaiLite-Regular.ttf");
   font-weight: normal;
 }
 
 @font-face {
   font-family: "LXGW WenKai Bold";
-  src: url("fonts/LXGWWenKai-Bold.ttf");
+  src: url("font/LXGWWenKaiLite-Bold.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "LXGW WenKai Mono";
+  src: url("font/LXGWWenKaiMonoLite-Regular.ttf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "LXGW WenKai Mono Bold";
+  src: url("font/LXGWWenKaiMonoLite-Bold.ttf");
   font-weight: bold;
 }
 /* pc width > 1024px */
@@ -378,10 +366,6 @@ a {
     font-size: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
-  }
-
-  #bottom-information-id > a {
-    font-size: 10px;
   }
 
   #upto-top {

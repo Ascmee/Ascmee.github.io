@@ -1,6 +1,6 @@
 var copy_item = document.querySelector("#info-copy");
 var save_item = document.querySelector("#info-save");
-
+document.title = document.querySelector("#content-page-title-id").textContent.trim() + " | " + author + "的博客";
 Array.from(document.querySelectorAll(".content-code-number")).forEach(function (val) {
   var contentText = val.parentElement.parentElement.parentElement.parentElement.lastElementChild.lastElementChild.lastElementChild.textContent.trim();
   val.textContent = getLineNumber(contentText);
@@ -31,23 +31,6 @@ Array.from(document.querySelectorAll(".content-page-code-button-copy-class")).fo
       document.body.removeChild(textarea);
     }
 
-    // if (navigator.clipboard) {
-    //   // clipboard api 复制
-    //   navigator.clipboard.writeText(text);
-    // } else {
-    //   var textarea = document.createElement("textarea");
-    //   document.body.appendChild(textarea);
-    //   // 隐藏此输入框
-    //   textarea.style.visibility = "hidden";
-    //   // 赋值
-    //   textarea.value = text;
-    //   // 选中
-    //   textarea.select();
-    //   // 复制
-    //   document.execCommand("copy", true);
-    //   // 移除输入框
-    //   document.body.removeChild(textarea);
-    // }
     copy_item.style.visibility = "visible";
     setTimeout(function () {
       copy_item.style.visibility = "hidden";
@@ -89,12 +72,12 @@ Array.from(document.querySelectorAll(".content-page-code-button-number-class")).
       }
     } else {
       var codeLine = numberLine.parentElement.parentElement.parentElement.lastElementChild.lastElementChild.lastElementChild;
-      if (codeLine.style.width == "calc(98vw - 35px)") {
+      if (codeLine.style.width == "calc(96vw - 47px)") {
         numberLine.style.marginLeft = "0px";
-        codeLine.style.width = "calc(98vw - 60px)";
+        codeLine.style.width = "calc(96vw - 72px)";
       } else {
         numberLine.style.marginLeft = "-25px";
-        codeLine.style.width = "calc(98vw - 35px)";
+        codeLine.style.width = "calc(96vw - 47px)";
       }
     }
   });

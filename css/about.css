@@ -32,7 +32,6 @@
 
 #content-time-id > p {
   font-size: 16px;
-  font-weight: lighter;
 }
 
 #content-content-id {
@@ -299,6 +298,10 @@ blockquote {
 
 /* iphoneX */
 @media screen and (max-width: 768px) {
+  #content-id {
+    display: block;
+  }
+
   #content-page-id {
     width: 96%;
     min-height: 0;
@@ -308,139 +311,153 @@ blockquote {
   }
 
   #content-page-title-id {
-    font-size: 25px;
     margin-top: 0;
   }
 
-  #content-time-id > p {
-    font-size: 10px;
-  }
-
   #content-content-id {
-    font-size: 15px;
     width: 100%;
     margin-left: 50%;
     transform: translate(-50%, 0);
   }
 
-  body {
-    font-size: 12px;
+  #bottom-information-id {
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 
-  code {
-    font-size: 12px;
+  pre code.hljs:not(content-code-number)::-webkit-scrollbar {
+    height: 0px;
+  }
+
+  pre {
+    width: 25px;
+  }
+
+  body {
+    font-size: 18px;
   }
 
   p {
-    font-size: 12px;
+    font-size: 18px;
   }
 
   a {
-    font-size: 12px;
+    font-size: 18px;
   }
 
   h1 {
-    font-size: 25px;
+    font-size: 40px;
   }
 
   h2 {
-    font-size: 22px;
+    font-size: 32px;
   }
 
   h3 {
-    font-size: 18px;
-  }
-
-  h4 {
-    font-size: 15px;
-  }
-
-  h5 {
-    font-size: 12px;
-  }
-
-  h6 {
-    font-size: 12px;
-  }
-
-  h1 > a {
     font-size: 25px;
   }
 
-  h2 > a {
-    font-size: 22px;
+  h4 {
+    font-size: 20px;
   }
 
-  h3 > a {
+  h5 {
     font-size: 18px;
   }
 
+  h6 {
+    font-size: 18px;
+  }
+
+  h1 > a {
+    font-size: 40px;
+  }
+
+  h2 > a {
+    font-size: 32px;
+  }
+
+  h3 > a {
+    font-size: 25px;
+  }
+
   h4 > a {
-    font-size: 15px;
+    font-size: 20px;
   }
 
   h5 > a {
-    font-size: 12px;
+    font-size: 18px;
   }
 
   h6 > a {
-    font-size: 12px;
+    font-size: 18px;
   }
 
   mark {
-    font-size: 12px;
+    font-size: 18px;
   }
 
   ul {
-    font-size: 12px;
+    font-size: 18px;
   }
 
   ol {
-    font-size: 12px;
+    font-size: 18px;
   }
 
   blockquote {
-    font-size: 12px;
+    font-size: 18px;
   }
 
   .content-inline-code-class {
-    font-size: 12px;
+    font-size: 18px;
   }
 
   .content-table-class > table th {
-    font-size: 12px;
+    font-size: 18px;
   }
 
   .content-table-class > table td {
-    font-size: 12px;
+    font-size: 18px;
   }
 
   .toc > li > a {
+    font-size: 18px;
+  }
+
+  #content-page-title-id {
+    font-size: 40px;
+  }
+
+  #content-time-id > p {
     font-size: 12px;
   }
 
   #content-page-content-id {
-    font-size: 12px;
+    font-size: 21px;
   }
 
   #content-page-content-id strong {
-    font-size: 12px;
+    font-size: 18px;
   }
 
   #content-page-content-id em {
-    font-size: 12px;
+    font-size: 18px;
   }
 
   #content-page-content-id del {
-    font-size: 12px;
+    font-size: 18px;
   }
 
   #content-page-content-id u {
-    font-size: 12px;
+    font-size: 18px;
   }
 
   #bottom-information-id {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    font-size: 15px;
+  }
+
+  #bottom-a-information-id {
+    font-size: 15px;
   }
 }
